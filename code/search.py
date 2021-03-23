@@ -101,7 +101,7 @@ def main():
                         
             # validation
             cur_step = (epoch+1) * len(train_loader)
-            for lam in np.array([0.1, 1., 10., 100.], dtype=np.float32):
+            for lam in np.array([0.0001, 0.001, 0.01, 0.1], dtype=np.float32):
                 val_qual = validate(valid_loader, model, epoch,
                                     cur_step, device, config, logger, writer, lam=lam)
                 plot_path = os.path.join(config.plot_path, "EP{:02d}_Seed{}".format(epoch+1, seed))

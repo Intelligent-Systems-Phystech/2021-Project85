@@ -1,0 +1,2110 @@
+03/21 07:33:23 AM | Logger is set - training start
+/usr/local/lib/python3.7/dist-packages/torchvision/datasets/mnist.py:58: UserWarning: train_data has been renamed data
+  warnings.warn("train_data has been renamed data")
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:477: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+03/21 07:33:41 AM | epoch0
+03/21 07:33:41 AM | using seed 0
+/usr/local/lib/python3.7/dist-packages/torch/optim/lr_scheduler.py:134: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/local/lib/python3.7/dist-packages/torch/optim/lr_scheduler.py:154: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+468it [02:47,  3.01it/s]03/21 07:36:29 AM | Train: [ 1/100] Step 468/468 Loss 0.967 Acc@(1) 79.2%
+469it [02:48,  2.79it/s]
+03/21 07:36:30 AM | Train: [ 1/100] Final Prec@1 79.1667%
+03/21 07:36:46 AM | Valid: [ 1/100] Final Prec@1 81.9200%; lambda = 0.0001
+03/21 07:36:46 AM | Quality*: 0.8192000000635783
+
+
+03/21 07:37:03 AM | Valid: [ 1/100] Final Prec@1 82.2967%; lambda = 0.001
+03/21 07:37:03 AM | Quality*: 0.8229666666984559
+
+
+03/21 07:37:19 AM | Valid: [ 1/100] Final Prec@1 81.8767%; lambda = 0.01
+03/21 07:37:19 AM | Quality: 0.8187666666666666
+
+
+03/21 07:37:35 AM | Valid: [ 1/100] Final Prec@1 81.2000%; lambda = 0.1
+03/21 07:37:35 AM | Quality: 0.8120000000317892
+
+
+03/21 07:37:35 AM | epoch1
+03/21 07:37:35 AM | using seed 1
+468it [02:51,  2.96it/s]03/21 07:40:28 AM | Train: [ 2/100] Step 468/468 Loss 0.214 Acc@(1) 93.8%
+469it [02:51,  2.73it/s]
+03/21 07:40:28 AM | Train: [ 2/100] Final Prec@1 93.7500%
+03/21 07:40:44 AM | Valid: [ 2/100] Final Prec@1 94.5000%; lambda = 0.0001
+03/21 07:40:44 AM | Quality*: 0.945
+
+
+03/21 07:41:01 AM | Valid: [ 2/100] Final Prec@1 94.3367%; lambda = 0.001
+03/21 07:41:01 AM | Quality: 0.9433666666666667
+
+
+03/21 07:41:18 AM | Valid: [ 2/100] Final Prec@1 94.2000%; lambda = 0.01
+03/21 07:41:18 AM | Quality: 0.9420000000317892
+
+
+03/21 07:41:34 AM | Valid: [ 2/100] Final Prec@1 94.4200%; lambda = 0.1
+03/21 07:41:34 AM | Quality: 0.9442000000317892
+
+
+03/21 07:41:34 AM | epoch2
+03/21 07:41:34 AM | using seed 2
+468it [02:51,  3.07it/s]03/21 07:44:27 AM | Train: [ 3/100] Step 468/468 Loss 0.146 Acc@(1) 100.0%
+469it [02:52,  2.72it/s]
+03/21 07:44:27 AM | Train: [ 3/100] Final Prec@1 100.0000%
+03/21 07:44:44 AM | Valid: [ 3/100] Final Prec@1 94.5933%; lambda = 0.0001
+03/21 07:44:44 AM | Quality*: 0.9459333333333333
+
+
+03/21 07:45:00 AM | Valid: [ 3/100] Final Prec@1 94.5100%; lambda = 0.001
+03/21 07:45:00 AM | Quality: 0.9451000000635783
+
+
+03/21 07:45:17 AM | Valid: [ 3/100] Final Prec@1 94.6167%; lambda = 0.01
+03/21 07:45:17 AM | Quality*: 0.946166666730245
+
+
+03/21 07:45:34 AM | Valid: [ 3/100] Final Prec@1 95.0767%; lambda = 0.1
+03/21 07:45:34 AM | Quality*: 0.9507666666984558
+
+
+03/21 07:45:34 AM | epoch3
+03/21 07:45:34 AM | using seed 3
+468it [02:51,  2.97it/s]03/21 07:48:26 AM | Train: [ 4/100] Step 468/468 Loss 0.116 Acc@(1) 87.5%
+469it [02:52,  2.72it/s]
+03/21 07:48:26 AM | Train: [ 4/100] Final Prec@1 87.5000%
+03/21 07:48:43 AM | Valid: [ 4/100] Final Prec@1 95.1800%; lambda = 0.0001
+03/21 07:48:43 AM | Quality*: 0.9518000000635782
+
+
+03/21 07:49:00 AM | Valid: [ 4/100] Final Prec@1 95.0933%; lambda = 0.001
+03/21 07:49:00 AM | Quality: 0.9509333333333333
+
+
+03/21 07:49:16 AM | Valid: [ 4/100] Final Prec@1 95.1267%; lambda = 0.01
+03/21 07:49:16 AM | Quality: 0.951266666730245
+
+
+03/21 07:49:32 AM | Valid: [ 4/100] Final Prec@1 94.6867%; lambda = 0.1
+03/21 07:49:32 AM | Quality: 0.9468666666984558
+
+
+03/21 07:49:32 AM | epoch4
+03/21 07:49:32 AM | using seed 4
+468it [02:51,  3.08it/s]03/21 07:52:25 AM | Train: [ 5/100] Step 468/468 Loss 0.103 Acc@(1) 97.9%
+469it [02:52,  2.73it/s]
+03/21 07:52:25 AM | Train: [ 5/100] Final Prec@1 97.9167%
+03/21 07:52:41 AM | Valid: [ 5/100] Final Prec@1 97.1733%; lambda = 0.0001
+03/21 07:52:41 AM | Quality*: 0.9717333333651225
+
+
+03/21 07:52:57 AM | Valid: [ 5/100] Final Prec@1 97.1233%; lambda = 0.001
+03/21 07:52:57 AM | Quality: 0.9712333333333333
+
+
+03/21 07:53:12 AM | Valid: [ 5/100] Final Prec@1 97.2233%; lambda = 0.01
+03/21 07:53:13 AM | Quality*: 0.9722333333969116
+
+
+03/21 07:53:28 AM | Valid: [ 5/100] Final Prec@1 97.2533%; lambda = 0.1
+03/21 07:53:28 AM | Quality*: 0.9725333333651225
+
+
+03/21 07:53:28 AM | epoch5
+03/21 07:53:28 AM | using seed 5
+468it [02:48,  2.94it/s]03/21 07:56:18 AM | Train: [ 6/100] Step 468/468 Loss 0.091 Acc@(1) 97.9%
+469it [02:49,  2.77it/s]
+03/21 07:56:18 AM | Train: [ 6/100] Final Prec@1 97.9167%
+03/21 07:56:34 AM | Valid: [ 6/100] Final Prec@1 97.1933%; lambda = 0.0001
+03/21 07:56:34 AM | Quality: 0.9719333333333333
+
+
+03/21 07:56:49 AM | Valid: [ 6/100] Final Prec@1 97.2900%; lambda = 0.001
+03/21 07:56:49 AM | Quality*: 0.9729
+
+
+03/21 07:57:05 AM | Valid: [ 6/100] Final Prec@1 97.1733%; lambda = 0.01
+03/21 07:57:05 AM | Quality: 0.9717333333333333
+
+
+03/21 07:57:21 AM | Valid: [ 6/100] Final Prec@1 96.7300%; lambda = 0.1
+03/21 07:57:21 AM | Quality: 0.9673000000317892
+
+
+03/21 07:57:21 AM | epoch6
+03/21 07:57:21 AM | using seed 6
+468it [02:46,  3.09it/s]03/21 08:00:08 AM | Train: [ 7/100] Step 468/468 Loss 0.088 Acc@(1) 97.9%
+469it [02:47,  2.81it/s]
+03/21 08:00:08 AM | Train: [ 7/100] Final Prec@1 97.9167%
+03/21 08:00:24 AM | Valid: [ 7/100] Final Prec@1 97.1967%; lambda = 0.0001
+03/21 08:00:24 AM | Quality: 0.9719666666984558
+
+
+03/21 08:00:39 AM | Valid: [ 7/100] Final Prec@1 97.2033%; lambda = 0.001
+03/21 08:00:39 AM | Quality: 0.9720333333651224
+
+
+03/21 08:00:55 AM | Valid: [ 7/100] Final Prec@1 97.0633%; lambda = 0.01
+03/21 08:00:55 AM | Quality: 0.9706333333969116
+
+
+03/21 08:01:11 AM | Valid: [ 7/100] Final Prec@1 97.2100%; lambda = 0.1
+03/21 08:01:11 AM | Quality: 0.9721000000635783
+
+
+03/21 08:01:11 AM | epoch7
+03/21 08:01:11 AM | using seed 7
+468it [02:47,  3.08it/s]03/21 08:03:59 AM | Train: [ 8/100] Step 468/468 Loss 0.085 Acc@(1) 97.9%
+469it [02:48,  2.79it/s]
+03/21 08:03:59 AM | Train: [ 8/100] Final Prec@1 97.9167%
+03/21 08:04:15 AM | Valid: [ 8/100] Final Prec@1 97.4500%; lambda = 0.0001
+03/21 08:04:15 AM | Quality*: 0.9745000000317892
+
+
+03/21 08:04:30 AM | Valid: [ 8/100] Final Prec@1 97.3833%; lambda = 0.001
+03/21 08:04:30 AM | Quality: 0.9738333333651225
+
+
+03/21 08:04:46 AM | Valid: [ 8/100] Final Prec@1 97.2933%; lambda = 0.01
+03/21 08:04:46 AM | Quality: 0.9729333333651224
+
+
+03/21 08:05:02 AM | Valid: [ 8/100] Final Prec@1 97.0667%; lambda = 0.1
+03/21 08:05:02 AM | Quality: 0.9706666666666667
+
+
+03/21 08:05:02 AM | epoch8
+03/21 08:05:02 AM | using seed 8
+468it [02:46,  3.13it/s]03/21 08:07:49 AM | Train: [ 9/100] Step 468/468 Loss 0.082 Acc@(1) 97.9%
+469it [02:47,  2.81it/s]
+03/21 08:07:49 AM | Train: [ 9/100] Final Prec@1 97.9167%
+03/21 08:08:05 AM | Valid: [ 9/100] Final Prec@1 97.1900%; lambda = 0.0001
+03/21 08:08:05 AM | Quality: 0.9719000000635782
+
+
+03/21 08:08:20 AM | Valid: [ 9/100] Final Prec@1 97.2533%; lambda = 0.001
+03/21 08:08:20 AM | Quality: 0.9725333333333334
+
+
+03/21 08:08:36 AM | Valid: [ 9/100] Final Prec@1 97.0933%; lambda = 0.01
+03/21 08:08:36 AM | Quality: 0.9709333333969116
+
+
+03/21 08:08:51 AM | Valid: [ 9/100] Final Prec@1 97.0133%; lambda = 0.1
+03/21 08:08:51 AM | Quality: 0.9701333333969117
+
+
+03/21 08:08:51 AM | epoch9
+03/21 08:08:51 AM | using seed 9
+468it [02:48,  3.13it/s]03/21 08:11:40 AM | Train: [10/100] Step 468/468 Loss 0.085 Acc@(1) 97.9%
+469it [02:48,  2.78it/s]
+03/21 08:11:40 AM | Train: [10/100] Final Prec@1 97.9167%
+03/21 08:11:56 AM | Valid: [10/100] Final Prec@1 97.0933%; lambda = 0.0001
+03/21 08:11:56 AM | Quality: 0.9709333333969116
+
+
+03/21 08:12:12 AM | Valid: [10/100] Final Prec@1 96.9300%; lambda = 0.001
+03/21 08:12:12 AM | Quality: 0.9693000000635783
+
+
+03/21 08:12:27 AM | Valid: [10/100] Final Prec@1 96.9633%; lambda = 0.01
+03/21 08:12:27 AM | Quality: 0.9696333333333333
+
+
+03/21 08:12:42 AM | Valid: [10/100] Final Prec@1 97.0633%; lambda = 0.1
+03/21 08:12:43 AM | Quality: 0.9706333333333333
+
+
+03/21 08:12:43 AM | epoch10
+03/21 08:12:43 AM | using seed 10
+468it [02:48,  3.10it/s]03/21 08:15:31 AM | Train: [11/100] Step 468/468 Loss 0.081 Acc@(1) 97.9%
+469it [02:48,  2.78it/s]
+03/21 08:15:32 AM | Train: [11/100] Final Prec@1 97.9167%
+03/21 08:15:47 AM | Valid: [11/100] Final Prec@1 97.4600%; lambda = 0.0001
+03/21 08:15:47 AM | Quality*: 0.9746000000635783
+
+
+03/21 08:16:03 AM | Valid: [11/100] Final Prec@1 97.5300%; lambda = 0.001
+03/21 08:16:03 AM | Quality*: 0.9753
+
+
+03/21 08:16:19 AM | Valid: [11/100] Final Prec@1 97.4533%; lambda = 0.01
+03/21 08:16:19 AM | Quality: 0.9745333333333334
+
+
+03/21 08:16:35 AM | Valid: [11/100] Final Prec@1 97.5733%; lambda = 0.1
+03/21 08:16:35 AM | Quality*: 0.9757333333651225
+
+
+03/21 08:16:35 AM | epoch11
+03/21 08:16:35 AM | using seed 11
+468it [02:47,  3.10it/s]03/21 08:19:22 AM | Train: [12/100] Step 468/468 Loss 0.081 Acc@(1) 93.8%
+469it [02:47,  2.80it/s]
+03/21 08:19:23 AM | Train: [12/100] Final Prec@1 93.7500%
+03/21 08:19:38 AM | Valid: [12/100] Final Prec@1 97.4833%; lambda = 0.0001
+03/21 08:19:38 AM | Quality: 0.9748333333333333
+
+
+03/21 08:19:54 AM | Valid: [12/100] Final Prec@1 97.5767%; lambda = 0.001
+03/21 08:19:54 AM | Quality*: 0.9757666667302449
+
+
+03/21 08:20:09 AM | Valid: [12/100] Final Prec@1 97.7167%; lambda = 0.01
+03/21 08:20:09 AM | Quality*: 0.9771666666984559
+
+
+03/21 08:20:25 AM | Valid: [12/100] Final Prec@1 97.6700%; lambda = 0.1
+03/21 08:20:25 AM | Quality: 0.9767000000317891
+
+
+03/21 08:20:25 AM | epoch12
+03/21 08:20:25 AM | using seed 12
+468it [02:46,  3.01it/s]03/21 08:23:12 AM | Train: [13/100] Step 468/468 Loss 0.086 Acc@(1) 97.9%
+469it [02:47,  2.81it/s]
+03/21 08:23:13 AM | Train: [13/100] Final Prec@1 97.9167%
+03/21 08:23:28 AM | Valid: [13/100] Final Prec@1 96.8533%; lambda = 0.0001
+03/21 08:23:28 AM | Quality: 0.9685333333969116
+
+
+03/21 08:23:44 AM | Valid: [13/100] Final Prec@1 96.6167%; lambda = 0.001
+03/21 08:23:44 AM | Quality: 0.9661666666984559
+
+
+03/21 08:23:59 AM | Valid: [13/100] Final Prec@1 96.8433%; lambda = 0.01
+03/21 08:23:59 AM | Quality: 0.9684333333969116
+
+
+03/21 08:24:15 AM | Valid: [13/100] Final Prec@1 96.5433%; lambda = 0.1
+03/21 08:24:15 AM | Quality: 0.9654333333333334
+
+
+03/21 08:24:15 AM | epoch13
+03/21 08:24:15 AM | using seed 13
+468it [02:46,  3.12it/s]03/21 08:27:02 AM | Train: [14/100] Step 468/468 Loss 0.086 Acc@(1) 97.9%
+469it [02:47,  2.81it/s]
+03/21 08:27:02 AM | Train: [14/100] Final Prec@1 97.9167%
+03/21 08:27:18 AM | Valid: [14/100] Final Prec@1 97.3333%; lambda = 0.0001
+03/21 08:27:18 AM | Quality: 0.9733333333651225
+
+
+03/21 08:27:34 AM | Valid: [14/100] Final Prec@1 97.4533%; lambda = 0.001
+03/21 08:27:34 AM | Quality: 0.9745333333651225
+
+
+03/21 08:27:49 AM | Valid: [14/100] Final Prec@1 97.4067%; lambda = 0.01
+03/21 08:27:50 AM | Quality: 0.9740666666984558
+
+
+03/21 08:28:05 AM | Valid: [14/100] Final Prec@1 97.1600%; lambda = 0.1
+03/21 08:28:05 AM | Quality: 0.9716000000635783
+
+
+03/21 08:28:05 AM | epoch14
+03/21 08:28:05 AM | using seed 14
+468it [02:46,  3.11it/s]03/21 08:30:52 AM | Train: [15/100] Step 468/468 Loss 0.092 Acc@(1) 100.0%
+469it [02:46,  2.81it/s]
+03/21 08:30:53 AM | Train: [15/100] Final Prec@1 100.0000%
+03/21 08:31:09 AM | Valid: [15/100] Final Prec@1 97.3600%; lambda = 0.0001
+03/21 08:31:09 AM | Quality: 0.9736000000635783
+
+
+03/21 08:31:24 AM | Valid: [15/100] Final Prec@1 97.3300%; lambda = 0.001
+03/21 08:31:24 AM | Quality: 0.9733
+
+
+03/21 08:31:39 AM | Valid: [15/100] Final Prec@1 97.3500%; lambda = 0.01
+03/21 08:31:39 AM | Quality: 0.9735000000635783
+
+
+03/21 08:31:55 AM | Valid: [15/100] Final Prec@1 97.2133%; lambda = 0.1
+03/21 08:31:55 AM | Quality: 0.9721333333651225
+
+
+03/21 08:31:55 AM | epoch15
+03/21 08:31:55 AM | using seed 15
+468it [02:48,  3.12it/s]03/21 08:34:44 AM | Train: [16/100] Step 468/468 Loss 0.089 Acc@(1) 100.0%
+469it [02:48,  2.78it/s]
+03/21 08:34:45 AM | Train: [16/100] Final Prec@1 100.0000%
+03/21 08:35:00 AM | Valid: [16/100] Final Prec@1 97.8400%; lambda = 0.0001
+03/21 08:35:00 AM | Quality*: 0.9784000000317892
+
+
+03/21 08:35:16 AM | Valid: [16/100] Final Prec@1 97.8900%; lambda = 0.001
+03/21 08:35:16 AM | Quality*: 0.9789000000317891
+
+
+03/21 08:35:32 AM | Valid: [16/100] Final Prec@1 97.8567%; lambda = 0.01
+03/21 08:35:32 AM | Quality: 0.9785666666666667
+
+
+03/21 08:35:47 AM | Valid: [16/100] Final Prec@1 97.6767%; lambda = 0.1
+03/21 08:35:47 AM | Quality: 0.9767666666984558
+
+
+03/21 08:35:47 AM | epoch16
+03/21 08:35:47 AM | using seed 16
+468it [02:46,  3.08it/s]03/21 08:38:34 AM | Train: [17/100] Step 468/468 Loss 0.087 Acc@(1) 97.9%
+469it [02:46,  2.81it/s]
+03/21 08:38:34 AM | Train: [17/100] Final Prec@1 97.9167%
+03/21 08:38:50 AM | Valid: [17/100] Final Prec@1 96.2533%; lambda = 0.0001
+03/21 08:38:50 AM | Quality: 0.9625333333969116
+
+
+03/21 08:39:06 AM | Valid: [17/100] Final Prec@1 96.3767%; lambda = 0.001
+03/21 08:39:06 AM | Quality: 0.9637666667302449
+
+
+03/21 08:39:21 AM | Valid: [17/100] Final Prec@1 96.3900%; lambda = 0.01
+03/21 08:39:21 AM | Quality: 0.9639000000635782
+
+
+03/21 08:39:37 AM | Valid: [17/100] Final Prec@1 96.8300%; lambda = 0.1
+03/21 08:39:37 AM | Quality: 0.9683
+
+
+03/21 08:39:37 AM | epoch17
+03/21 08:39:37 AM | using seed 17
+468it [02:46,  3.00it/s]03/21 08:42:25 AM | Train: [18/100] Step 468/468 Loss 0.094 Acc@(1) 100.0%
+469it [02:47,  2.80it/s]
+03/21 08:42:25 AM | Train: [18/100] Final Prec@1 100.0000%
+03/21 08:42:40 AM | Valid: [18/100] Final Prec@1 97.3633%; lambda = 0.0001
+03/21 08:42:40 AM | Quality: 0.9736333333651225
+
+
+03/21 08:42:56 AM | Valid: [18/100] Final Prec@1 97.3767%; lambda = 0.001
+03/21 08:42:56 AM | Quality: 0.9737666667302449
+
+
+03/21 08:43:12 AM | Valid: [18/100] Final Prec@1 97.2633%; lambda = 0.01
+03/21 08:43:12 AM | Quality: 0.9726333333651225
+
+
+03/21 08:43:27 AM | Valid: [18/100] Final Prec@1 96.4300%; lambda = 0.1
+03/21 08:43:27 AM | Quality: 0.9643000000317892
+
+
+03/21 08:43:27 AM | epoch18
+03/21 08:43:27 AM | using seed 18
+468it [02:45,  2.95it/s]03/21 08:46:14 AM | Train: [19/100] Step 468/468 Loss 0.101 Acc@(1) 100.0%
+469it [02:46,  2.82it/s]
+03/21 08:46:14 AM | Train: [19/100] Final Prec@1 100.0000%
+03/21 08:46:29 AM | Valid: [19/100] Final Prec@1 97.1300%; lambda = 0.0001
+03/21 08:46:29 AM | Quality: 0.9713
+
+
+03/21 08:46:45 AM | Valid: [19/100] Final Prec@1 97.1733%; lambda = 0.001
+03/21 08:46:45 AM | Quality: 0.9717333333651225
+
+
+03/21 08:47:00 AM | Valid: [19/100] Final Prec@1 97.1967%; lambda = 0.01
+03/21 08:47:00 AM | Quality: 0.9719666666666666
+
+
+03/21 08:47:15 AM | Valid: [19/100] Final Prec@1 97.2200%; lambda = 0.1
+03/21 08:47:15 AM | Quality: 0.9722000000317892
+
+
+03/21 08:47:15 AM | epoch19
+03/21 08:47:15 AM | using seed 19
+468it [02:45,  3.18it/s]03/21 08:50:01 AM | Train: [20/100] Step 468/468 Loss 0.093 Acc@(1) 93.8%
+469it [02:45,  2.83it/s]
+03/21 08:50:02 AM | Train: [20/100] Final Prec@1 93.7500%
+03/21 08:50:18 AM | Valid: [20/100] Final Prec@1 97.6100%; lambda = 0.0001
+03/21 08:50:18 AM | Quality: 0.9761000000317891
+
+
+03/21 08:50:34 AM | Valid: [20/100] Final Prec@1 97.5733%; lambda = 0.001
+03/21 08:50:34 AM | Quality: 0.9757333333969116
+
+
+03/21 08:50:49 AM | Valid: [20/100] Final Prec@1 97.6367%; lambda = 0.01
+03/21 08:50:49 AM | Quality: 0.9763666666666667
+
+
+03/21 08:51:04 AM | Valid: [20/100] Final Prec@1 97.5133%; lambda = 0.1
+03/21 08:51:05 AM | Quality: 0.9751333333333333
+
+
+03/21 08:51:05 AM | epoch20
+03/21 08:51:05 AM | using seed 20
+468it [02:47,  3.03it/s]03/21 08:53:53 AM | Train: [21/100] Step 468/468 Loss 0.104 Acc@(1) 97.9%
+469it [02:47,  2.79it/s]
+03/21 08:53:53 AM | Train: [21/100] Final Prec@1 97.9167%
+03/21 08:54:09 AM | Valid: [21/100] Final Prec@1 97.3433%; lambda = 0.0001
+03/21 08:54:09 AM | Quality: 0.9734333333969116
+
+
+03/21 08:54:24 AM | Valid: [21/100] Final Prec@1 97.3800%; lambda = 0.001
+03/21 08:54:24 AM | Quality: 0.9738
+
+
+03/21 08:54:40 AM | Valid: [21/100] Final Prec@1 97.4933%; lambda = 0.01
+03/21 08:54:40 AM | Quality: 0.9749333333333333
+
+
+03/21 08:54:56 AM | Valid: [21/100] Final Prec@1 96.0333%; lambda = 0.1
+03/21 08:54:56 AM | Quality: 0.9603333333969116
+
+
+03/21 08:54:56 AM | epoch21
+03/21 08:54:56 AM | using seed 21
+468it [02:49,  3.10it/s]03/21 08:57:46 AM | Train: [22/100] Step 468/468 Loss 0.103 Acc@(1) 91.7%
+469it [02:49,  2.77it/s]
+03/21 08:57:46 AM | Train: [22/100] Final Prec@1 91.6667%
+03/21 08:58:02 AM | Valid: [22/100] Final Prec@1 96.3400%; lambda = 0.0001
+03/21 08:58:02 AM | Quality: 0.9634
+
+
+03/21 08:58:18 AM | Valid: [22/100] Final Prec@1 96.3767%; lambda = 0.001
+03/21 08:58:18 AM | Quality: 0.9637666667302449
+
+
+03/21 08:58:34 AM | Valid: [22/100] Final Prec@1 96.3667%; lambda = 0.01
+03/21 08:58:34 AM | Quality: 0.9636666666984558
+
+
+03/21 08:58:50 AM | Valid: [22/100] Final Prec@1 94.1067%; lambda = 0.1
+03/21 08:58:50 AM | Quality: 0.9410666666984558
+
+
+03/21 08:58:50 AM | epoch22
+03/21 08:58:50 AM | using seed 22
+468it [02:49,  3.01it/s]03/21 09:01:41 AM | Train: [23/100] Step 468/468 Loss 0.107 Acc@(1) 95.8%
+469it [02:50,  2.75it/s]
+03/21 09:01:41 AM | Train: [23/100] Final Prec@1 95.8333%
+03/21 09:01:57 AM | Valid: [23/100] Final Prec@1 94.3667%; lambda = 0.0001
+03/21 09:01:57 AM | Quality: 0.9436666666984558
+
+
+03/21 09:02:13 AM | Valid: [23/100] Final Prec@1 94.4533%; lambda = 0.001
+03/21 09:02:13 AM | Quality: 0.9445333333651225
+
+
+03/21 09:02:30 AM | Valid: [23/100] Final Prec@1 94.6400%; lambda = 0.01
+03/21 09:02:30 AM | Quality: 0.9464000000635783
+
+
+03/21 09:02:46 AM | Valid: [23/100] Final Prec@1 96.2000%; lambda = 0.1
+03/21 09:02:46 AM | Quality: 0.9620000000635783
+
+
+03/21 09:02:46 AM | epoch23
+03/21 09:02:46 AM | using seed 23
+468it [02:48,  3.11it/s]03/21 09:05:35 AM | Train: [24/100] Step 468/468 Loss 0.108 Acc@(1) 100.0%
+469it [02:48,  2.78it/s]
+03/21 09:05:35 AM | Train: [24/100] Final Prec@1 100.0000%
+03/21 09:05:51 AM | Valid: [24/100] Final Prec@1 97.2200%; lambda = 0.0001
+03/21 09:05:51 AM | Quality: 0.9722000000635783
+
+
+03/21 09:06:07 AM | Valid: [24/100] Final Prec@1 97.2333%; lambda = 0.001
+03/21 09:06:07 AM | Quality: 0.9723333333969116
+
+
+03/21 09:06:23 AM | Valid: [24/100] Final Prec@1 97.2000%; lambda = 0.01
+03/21 09:06:23 AM | Quality: 0.9720000000635783
+
+
+03/21 09:06:39 AM | Valid: [24/100] Final Prec@1 96.1900%; lambda = 0.1
+03/21 09:06:39 AM | Quality: 0.9619000000635783
+
+
+03/21 09:06:39 AM | epoch24
+03/21 09:06:39 AM | using seed 24
+468it [02:47,  3.03it/s]03/21 09:09:27 AM | Train: [25/100] Step 468/468 Loss 0.114 Acc@(1) 97.9%
+469it [02:47,  2.79it/s]
+03/21 09:09:27 AM | Train: [25/100] Final Prec@1 97.9167%
+03/21 09:09:43 AM | Valid: [25/100] Final Prec@1 96.6200%; lambda = 0.0001
+03/21 09:09:43 AM | Quality: 0.9662000000317892
+
+
+03/21 09:09:58 AM | Valid: [25/100] Final Prec@1 96.5600%; lambda = 0.001
+03/21 09:09:58 AM | Quality: 0.9656000000317891
+
+
+03/21 09:10:14 AM | Valid: [25/100] Final Prec@1 96.5167%; lambda = 0.01
+03/21 09:10:14 AM | Quality: 0.9651666666984559
+
+
+03/21 09:10:30 AM | Valid: [25/100] Final Prec@1 93.7800%; lambda = 0.1
+03/21 09:10:30 AM | Quality: 0.9378
+
+
+03/21 09:10:30 AM | epoch25
+03/21 09:10:30 AM | using seed 25
+468it [02:47,  3.11it/s]03/21 09:13:18 AM | Train: [26/100] Step 468/468 Loss 0.111 Acc@(1) 100.0%
+469it [02:47,  2.80it/s]
+03/21 09:13:18 AM | Train: [26/100] Final Prec@1 100.0000%
+03/21 09:13:34 AM | Valid: [26/100] Final Prec@1 96.9567%; lambda = 0.0001
+03/21 09:13:34 AM | Quality: 0.9695666666666667
+
+
+03/21 09:13:49 AM | Valid: [26/100] Final Prec@1 96.8200%; lambda = 0.001
+03/21 09:13:49 AM | Quality: 0.9682000000635783
+
+
+03/21 09:14:05 AM | Valid: [26/100] Final Prec@1 97.0133%; lambda = 0.01
+03/21 09:14:05 AM | Quality: 0.9701333333651225
+
+
+03/21 09:14:21 AM | Valid: [26/100] Final Prec@1 96.0433%; lambda = 0.1
+03/21 09:14:21 AM | Quality: 0.9604333333333334
+
+
+03/21 09:14:21 AM | epoch26
+03/21 09:14:21 AM | using seed 26
+468it [02:48,  2.83it/s]03/21 09:17:10 AM | Train: [27/100] Step 468/468 Loss 0.116 Acc@(1) 95.8%
+469it [02:48,  2.78it/s]
+03/21 09:17:10 AM | Train: [27/100] Final Prec@1 95.8333%
+03/21 09:17:25 AM | Valid: [27/100] Final Prec@1 96.5000%; lambda = 0.0001
+03/21 09:17:25 AM | Quality: 0.9650000000317891
+
+
+03/21 09:17:41 AM | Valid: [27/100] Final Prec@1 96.5467%; lambda = 0.001
+03/21 09:17:42 AM | Quality: 0.9654666666666667
+
+
+03/21 09:17:57 AM | Valid: [27/100] Final Prec@1 96.5233%; lambda = 0.01
+03/21 09:17:57 AM | Quality: 0.9652333333651225
+
+
+03/21 09:18:13 AM | Valid: [27/100] Final Prec@1 94.7100%; lambda = 0.1
+03/21 09:18:13 AM | Quality: 0.9471000000317892
+
+
+03/21 09:18:13 AM | epoch27
+03/21 09:18:13 AM | using seed 27
+468it [02:45,  2.78it/s]03/21 09:21:00 AM | Train: [28/100] Step 468/468 Loss 0.118 Acc@(1) 100.0%
+469it [02:45,  2.83it/s]
+03/21 09:21:00 AM | Train: [28/100] Final Prec@1 100.0000%
+03/21 09:21:15 AM | Valid: [28/100] Final Prec@1 96.2700%; lambda = 0.0001
+03/21 09:21:15 AM | Quality: 0.9627
+
+
+03/21 09:21:31 AM | Valid: [28/100] Final Prec@1 96.2600%; lambda = 0.001
+03/21 09:21:31 AM | Quality: 0.9626000000635783
+
+
+03/21 09:21:46 AM | Valid: [28/100] Final Prec@1 96.4067%; lambda = 0.01
+03/21 09:21:47 AM | Quality: 0.9640666666666666
+
+
+03/21 09:22:02 AM | Valid: [28/100] Final Prec@1 96.1100%; lambda = 0.1
+03/21 09:22:02 AM | Quality: 0.9611000000317892
+
+
+03/21 09:22:02 AM | epoch28
+03/21 09:22:02 AM | using seed 28
+468it [02:46,  3.13it/s]03/21 09:24:49 AM | Train: [29/100] Step 468/468 Loss 0.120 Acc@(1) 93.8%
+469it [02:46,  2.82it/s]
+03/21 09:24:50 AM | Train: [29/100] Final Prec@1 93.7500%
+03/21 09:25:05 AM | Valid: [29/100] Final Prec@1 93.7233%; lambda = 0.0001
+03/21 09:25:05 AM | Quality: 0.9372333333969116
+
+
+03/21 09:25:21 AM | Valid: [29/100] Final Prec@1 93.8933%; lambda = 0.001
+03/21 09:25:21 AM | Quality: 0.9389333333651225
+
+
+03/21 09:25:36 AM | Valid: [29/100] Final Prec@1 94.0567%; lambda = 0.01
+03/21 09:25:37 AM | Quality: 0.9405666667302449
+
+
+03/21 09:25:52 AM | Valid: [29/100] Final Prec@1 93.9300%; lambda = 0.1
+03/21 09:25:52 AM | Quality: 0.9393000000317892
+
+
+03/21 09:25:52 AM | epoch29
+03/21 09:25:52 AM | using seed 29
+468it [02:47,  2.97it/s]03/21 09:28:40 AM | Train: [30/100] Step 468/468 Loss 0.116 Acc@(1) 97.9%
+469it [02:47,  2.80it/s]
+03/21 09:28:40 AM | Train: [30/100] Final Prec@1 97.9167%
+03/21 09:28:56 AM | Valid: [30/100] Final Prec@1 95.9733%; lambda = 0.0001
+03/21 09:28:57 AM | Quality: 0.9597333333969116
+
+
+03/21 09:29:12 AM | Valid: [30/100] Final Prec@1 95.9133%; lambda = 0.001
+03/21 09:29:12 AM | Quality: 0.9591333333651225
+
+
+03/21 09:29:28 AM | Valid: [30/100] Final Prec@1 95.8900%; lambda = 0.01
+03/21 09:29:28 AM | Quality: 0.9589
+
+
+03/21 09:29:44 AM | Valid: [30/100] Final Prec@1 96.3500%; lambda = 0.1
+03/21 09:29:44 AM | Quality: 0.9635000000635783
+
+
+03/21 09:29:44 AM | epoch30
+03/21 09:29:44 AM | using seed 30
+468it [02:47,  2.73it/s]03/21 09:32:32 AM | Train: [31/100] Step 468/468 Loss 0.124 Acc@(1) 100.0%
+469it [02:47,  2.80it/s]
+03/21 09:32:32 AM | Train: [31/100] Final Prec@1 100.0000%
+03/21 09:32:47 AM | Valid: [31/100] Final Prec@1 96.2633%; lambda = 0.0001
+03/21 09:32:47 AM | Quality: 0.9626333333651225
+
+
+03/21 09:33:03 AM | Valid: [31/100] Final Prec@1 96.2900%; lambda = 0.001
+03/21 09:33:03 AM | Quality: 0.9629000000635783
+
+
+03/21 09:33:19 AM | Valid: [31/100] Final Prec@1 96.1667%; lambda = 0.01
+03/21 09:33:19 AM | Quality: 0.9616666667302449
+
+
+03/21 09:33:34 AM | Valid: [31/100] Final Prec@1 94.1867%; lambda = 0.1
+03/21 09:33:34 AM | Quality: 0.9418666666984558
+
+
+03/21 09:33:34 AM | epoch31
+03/21 09:33:34 AM | using seed 31
+468it [02:46,  3.03it/s]03/21 09:36:21 AM | Train: [32/100] Step 468/468 Loss 0.115 Acc@(1) 95.8%
+469it [02:46,  2.81it/s]
+03/21 09:36:22 AM | Train: [32/100] Final Prec@1 95.8333%
+03/21 09:36:37 AM | Valid: [32/100] Final Prec@1 96.4733%; lambda = 0.0001
+03/21 09:36:37 AM | Quality: 0.9647333333651225
+
+
+03/21 09:36:53 AM | Valid: [32/100] Final Prec@1 96.5300%; lambda = 0.001
+03/21 09:36:53 AM | Quality: 0.9653000000317892
+
+
+03/21 09:37:09 AM | Valid: [32/100] Final Prec@1 96.3400%; lambda = 0.01
+03/21 09:37:09 AM | Quality: 0.9634000000317892
+
+
+03/21 09:37:24 AM | Valid: [32/100] Final Prec@1 95.1967%; lambda = 0.1
+03/21 09:37:24 AM | Quality: 0.951966666730245
+
+
+03/21 09:37:24 AM | epoch32
+03/21 09:37:24 AM | using seed 32
+468it [02:47,  2.93it/s]03/21 09:40:12 AM | Train: [33/100] Step 468/468 Loss 0.121 Acc@(1) 93.8%
+469it [02:47,  2.80it/s]
+03/21 09:40:12 AM | Train: [33/100] Final Prec@1 93.7500%
+03/21 09:40:28 AM | Valid: [33/100] Final Prec@1 95.4667%; lambda = 0.0001
+03/21 09:40:28 AM | Quality: 0.9546666666984558
+
+
+03/21 09:40:44 AM | Valid: [33/100] Final Prec@1 95.3667%; lambda = 0.001
+03/21 09:40:44 AM | Quality: 0.9536666666666667
+
+
+03/21 09:40:59 AM | Valid: [33/100] Final Prec@1 95.4433%; lambda = 0.01
+03/21 09:41:00 AM | Quality: 0.9544333333969116
+
+
+03/21 09:41:15 AM | Valid: [33/100] Final Prec@1 95.5500%; lambda = 0.1
+03/21 09:41:15 AM | Quality: 0.9555
+
+
+03/21 09:41:15 AM | epoch33
+03/21 09:41:15 AM | using seed 33
+468it [02:46,  3.18it/s]03/21 09:44:03 AM | Train: [34/100] Step 468/468 Loss 0.126 Acc@(1) 100.0%
+469it [02:46,  2.81it/s]
+03/21 09:44:03 AM | Train: [34/100] Final Prec@1 100.0000%
+03/21 09:44:19 AM | Valid: [34/100] Final Prec@1 96.8367%; lambda = 0.0001
+03/21 09:44:19 AM | Quality: 0.9683666666984558
+
+
+03/21 09:44:34 AM | Valid: [34/100] Final Prec@1 96.8933%; lambda = 0.001
+03/21 09:44:35 AM | Quality: 0.9689333333333333
+
+
+03/21 09:44:51 AM | Valid: [34/100] Final Prec@1 96.7967%; lambda = 0.01
+03/21 09:44:51 AM | Quality: 0.9679666666666666
+
+
+03/21 09:45:07 AM | Valid: [34/100] Final Prec@1 94.1000%; lambda = 0.1
+03/21 09:45:07 AM | Quality: 0.9410000000317892
+
+
+03/21 09:45:07 AM | epoch34
+03/21 09:45:07 AM | using seed 34
+468it [02:48,  3.10it/s]03/21 09:47:56 AM | Train: [35/100] Step 468/468 Loss 0.128 Acc@(1) 100.0%
+469it [02:48,  2.78it/s]
+03/21 09:47:56 AM | Train: [35/100] Final Prec@1 100.0000%
+03/21 09:48:12 AM | Valid: [35/100] Final Prec@1 96.2333%; lambda = 0.0001
+03/21 09:48:12 AM | Quality: 0.9623333333333334
+
+
+03/21 09:48:28 AM | Valid: [35/100] Final Prec@1 96.1733%; lambda = 0.001
+03/21 09:48:28 AM | Quality: 0.9617333333333333
+
+
+03/21 09:48:43 AM | Valid: [35/100] Final Prec@1 96.3167%; lambda = 0.01
+03/21 09:48:43 AM | Quality: 0.9631666666666666
+
+
+03/21 09:48:59 AM | Valid: [35/100] Final Prec@1 96.4000%; lambda = 0.1
+03/21 09:48:59 AM | Quality: 0.9640000000317891
+
+
+03/21 09:48:59 AM | epoch35
+03/21 09:48:59 AM | using seed 35
+468it [02:49,  2.87it/s]03/21 09:51:49 AM | Train: [36/100] Step 468/468 Loss 0.131 Acc@(1) 95.8%
+469it [02:49,  2.77it/s]
+03/21 09:51:49 AM | Train: [36/100] Final Prec@1 95.8333%
+03/21 09:52:04 AM | Valid: [36/100] Final Prec@1 94.4433%; lambda = 0.0001
+03/21 09:52:04 AM | Quality: 0.9444333333651225
+
+
+03/21 09:52:20 AM | Valid: [36/100] Final Prec@1 94.4867%; lambda = 0.001
+03/21 09:52:20 AM | Quality: 0.9448666666666666
+
+
+03/21 09:52:35 AM | Valid: [36/100] Final Prec@1 94.8400%; lambda = 0.01
+03/21 09:52:35 AM | Quality: 0.9484000000635783
+
+
+03/21 09:52:51 AM | Valid: [36/100] Final Prec@1 94.9867%; lambda = 0.1
+03/21 09:52:51 AM | Quality: 0.9498666666666666
+
+
+03/21 09:52:51 AM | epoch36
+03/21 09:52:51 AM | using seed 36
+468it [02:46,  2.93it/s]03/21 09:55:39 AM | Train: [37/100] Step 468/468 Loss 0.123 Acc@(1) 91.7%
+469it [02:47,  2.80it/s]
+03/21 09:55:39 AM | Train: [37/100] Final Prec@1 91.6667%
+03/21 09:55:55 AM | Valid: [37/100] Final Prec@1 96.4633%; lambda = 0.0001
+03/21 09:55:55 AM | Quality: 0.9646333333333333
+
+
+03/21 09:56:10 AM | Valid: [37/100] Final Prec@1 96.4467%; lambda = 0.001
+03/21 09:56:10 AM | Quality: 0.9644666666666667
+
+
+03/21 09:56:26 AM | Valid: [37/100] Final Prec@1 96.5200%; lambda = 0.01
+03/21 09:56:26 AM | Quality: 0.9652
+
+
+03/21 09:56:41 AM | Valid: [37/100] Final Prec@1 95.5333%; lambda = 0.1
+03/21 09:56:41 AM | Quality: 0.9553333333651225
+
+
+03/21 09:56:41 AM | epoch37
+03/21 09:56:41 AM | using seed 37
+468it [02:48,  3.14it/s]03/21 09:59:31 AM | Train: [38/100] Step 468/468 Loss 0.123 Acc@(1) 97.9%
+469it [02:48,  2.78it/s]
+03/21 09:59:31 AM | Train: [38/100] Final Prec@1 97.9167%
+03/21 09:59:47 AM | Valid: [38/100] Final Prec@1 96.6133%; lambda = 0.0001
+03/21 09:59:47 AM | Quality: 0.9661333333969117
+
+
+03/21 10:00:02 AM | Valid: [38/100] Final Prec@1 96.5867%; lambda = 0.001
+03/21 10:00:02 AM | Quality: 0.9658666666984558
+
+
+03/21 10:00:18 AM | Valid: [38/100] Final Prec@1 96.7433%; lambda = 0.01
+03/21 10:00:18 AM | Quality: 0.9674333333651225
+
+
+03/21 10:00:33 AM | Valid: [38/100] Final Prec@1 95.2667%; lambda = 0.1
+03/21 10:00:33 AM | Quality: 0.9526666666984558
+
+
+03/21 10:00:33 AM | epoch38
+03/21 10:00:33 AM | using seed 38
+468it [02:46,  3.07it/s]03/21 10:03:21 AM | Train: [39/100] Step 468/468 Loss 0.122 Acc@(1) 100.0%
+469it [02:47,  2.80it/s]
+03/21 10:03:21 AM | Train: [39/100] Final Prec@1 100.0000%
+03/21 10:03:37 AM | Valid: [39/100] Final Prec@1 96.4800%; lambda = 0.0001
+03/21 10:03:37 AM | Quality: 0.9648000000317891
+
+
+03/21 10:03:53 AM | Valid: [39/100] Final Prec@1 96.5900%; lambda = 0.001
+03/21 10:03:53 AM | Quality: 0.9659000000317891
+
+
+03/21 10:04:09 AM | Valid: [39/100] Final Prec@1 96.4000%; lambda = 0.01
+03/21 10:04:09 AM | Quality: 0.964
+
+
+03/21 10:04:24 AM | Valid: [39/100] Final Prec@1 95.3200%; lambda = 0.1
+03/21 10:04:24 AM | Quality: 0.9532
+
+
+03/21 10:04:24 AM | epoch39
+03/21 10:04:24 AM | using seed 39
+468it [02:47,  3.12it/s]03/21 10:07:13 AM | Train: [40/100] Step 468/468 Loss 0.133 Acc@(1) 100.0%
+469it [02:48,  2.79it/s]
+03/21 10:07:13 AM | Train: [40/100] Final Prec@1 100.0000%
+03/21 10:07:28 AM | Valid: [40/100] Final Prec@1 95.6900%; lambda = 0.0001
+03/21 10:07:28 AM | Quality: 0.9569000000635783
+
+
+03/21 10:07:44 AM | Valid: [40/100] Final Prec@1 95.5467%; lambda = 0.001
+03/21 10:07:44 AM | Quality: 0.9554666666666667
+
+
+03/21 10:07:59 AM | Valid: [40/100] Final Prec@1 95.6200%; lambda = 0.01
+03/21 10:07:59 AM | Quality: 0.9562000000317892
+
+
+03/21 10:08:15 AM | Valid: [40/100] Final Prec@1 93.1133%; lambda = 0.1
+03/21 10:08:15 AM | Quality: 0.9311333333333334
+
+
+03/21 10:08:15 AM | epoch40
+03/21 10:08:15 AM | using seed 40
+468it [02:47,  3.16it/s]03/21 10:11:03 AM | Train: [41/100] Step 468/468 Loss 0.120 Acc@(1) 93.8%
+469it [02:48,  2.79it/s]
+03/21 10:11:04 AM | Train: [41/100] Final Prec@1 93.7500%
+03/21 10:11:19 AM | Valid: [41/100] Final Prec@1 96.6300%; lambda = 0.0001
+03/21 10:11:19 AM | Quality: 0.9663000000635783
+
+
+03/21 10:11:35 AM | Valid: [41/100] Final Prec@1 96.7167%; lambda = 0.001
+03/21 10:11:35 AM | Quality: 0.9671666666984559
+
+
+03/21 10:11:50 AM | Valid: [41/100] Final Prec@1 96.6567%; lambda = 0.01
+03/21 10:11:50 AM | Quality: 0.9665666666984558
+
+
+03/21 10:12:06 AM | Valid: [41/100] Final Prec@1 95.2900%; lambda = 0.1
+03/21 10:12:06 AM | Quality: 0.9529
+
+
+03/21 10:12:06 AM | epoch41
+03/21 10:12:06 AM | using seed 41
+468it [02:45,  2.89it/s]03/21 10:14:52 AM | Train: [42/100] Step 468/468 Loss 0.119 Acc@(1) 95.8%
+469it [02:45,  2.83it/s]
+03/21 10:14:52 AM | Train: [42/100] Final Prec@1 95.8333%
+03/21 10:15:08 AM | Valid: [42/100] Final Prec@1 94.9000%; lambda = 0.0001
+03/21 10:15:08 AM | Quality: 0.949
+
+
+03/21 10:15:23 AM | Valid: [42/100] Final Prec@1 94.9533%; lambda = 0.001
+03/21 10:15:23 AM | Quality: 0.9495333333333333
+
+
+03/21 10:15:39 AM | Valid: [42/100] Final Prec@1 95.2133%; lambda = 0.01
+03/21 10:15:39 AM | Quality: 0.9521333333333334
+
+
+03/21 10:15:54 AM | Valid: [42/100] Final Prec@1 96.6667%; lambda = 0.1
+03/21 10:15:54 AM | Quality: 0.9666666667302449
+
+
+03/21 10:15:54 AM | epoch42
+03/21 10:15:54 AM | using seed 42
+468it [02:46,  3.07it/s]03/21 10:18:42 AM | Train: [43/100] Step 468/468 Loss 0.122 Acc@(1) 91.7%
+469it [02:47,  2.80it/s]
+03/21 10:18:42 AM | Train: [43/100] Final Prec@1 91.6667%
+03/21 10:18:58 AM | Valid: [43/100] Final Prec@1 96.0533%; lambda = 0.0001
+03/21 10:18:58 AM | Quality: 0.9605333333333334
+
+
+03/21 10:19:13 AM | Valid: [43/100] Final Prec@1 96.0167%; lambda = 0.001
+03/21 10:19:13 AM | Quality: 0.9601666666666666
+
+
+03/21 10:19:29 AM | Valid: [43/100] Final Prec@1 96.1367%; lambda = 0.01
+03/21 10:19:29 AM | Quality: 0.9613666666666667
+
+
+03/21 10:19:45 AM | Valid: [43/100] Final Prec@1 95.3167%; lambda = 0.1
+03/21 10:19:45 AM | Quality: 0.9531666666984558
+
+
+03/21 10:19:45 AM | epoch43
+03/21 10:19:45 AM | using seed 43
+468it [02:50,  2.88it/s]03/21 10:22:36 AM | Train: [44/100] Step 468/468 Loss 0.137 Acc@(1) 97.9%
+469it [02:50,  2.75it/s]
+03/21 10:22:36 AM | Train: [44/100] Final Prec@1 97.9167%
+03/21 10:22:52 AM | Valid: [44/100] Final Prec@1 96.2400%; lambda = 0.0001
+03/21 10:22:52 AM | Quality: 0.9624000000317892
+
+
+03/21 10:23:08 AM | Valid: [44/100] Final Prec@1 96.2733%; lambda = 0.001
+03/21 10:23:08 AM | Quality: 0.9627333333333333
+
+
+03/21 10:23:23 AM | Valid: [44/100] Final Prec@1 96.3333%; lambda = 0.01
+03/21 10:23:24 AM | Quality: 0.9633333333969116
+
+
+03/21 10:23:39 AM | Valid: [44/100] Final Prec@1 94.7900%; lambda = 0.1
+03/21 10:23:39 AM | Quality: 0.9479000000317891
+
+
+03/21 10:23:39 AM | epoch44
+03/21 10:23:39 AM | using seed 44
+468it [02:48,  2.86it/s]03/21 10:26:29 AM | Train: [45/100] Step 468/468 Loss 0.130 Acc@(1) 95.8%
+469it [02:49,  2.77it/s]
+03/21 10:26:29 AM | Train: [45/100] Final Prec@1 95.8333%
+03/21 10:26:44 AM | Valid: [45/100] Final Prec@1 96.8000%; lambda = 0.0001
+03/21 10:26:44 AM | Quality: 0.9680000000635783
+
+
+03/21 10:27:00 AM | Valid: [45/100] Final Prec@1 96.7667%; lambda = 0.001
+03/21 10:27:00 AM | Quality: 0.9676666667302449
+
+
+03/21 10:27:16 AM | Valid: [45/100] Final Prec@1 96.6700%; lambda = 0.01
+03/21 10:27:16 AM | Quality: 0.9667000000317891
+
+
+03/21 10:27:31 AM | Valid: [45/100] Final Prec@1 94.4000%; lambda = 0.1
+03/21 10:27:31 AM | Quality: 0.9440000000317892
+
+
+03/21 10:27:31 AM | epoch45
+03/21 10:27:31 AM | using seed 45
+468it [02:48,  3.03it/s]03/21 10:30:21 AM | Train: [46/100] Step 468/468 Loss 0.130 Acc@(1) 97.9%
+469it [02:49,  2.77it/s]
+03/21 10:30:21 AM | Train: [46/100] Final Prec@1 97.9167%
+03/21 10:30:37 AM | Valid: [46/100] Final Prec@1 94.5433%; lambda = 0.0001
+03/21 10:30:37 AM | Quality: 0.9454333333969116
+
+
+03/21 10:30:52 AM | Valid: [46/100] Final Prec@1 94.6700%; lambda = 0.001
+03/21 10:30:52 AM | Quality: 0.9467000000317891
+
+
+03/21 10:31:08 AM | Valid: [46/100] Final Prec@1 94.8633%; lambda = 0.01
+03/21 10:31:08 AM | Quality: 0.9486333333651225
+
+
+03/21 10:31:23 AM | Valid: [46/100] Final Prec@1 95.0400%; lambda = 0.1
+03/21 10:31:23 AM | Quality: 0.9504
+
+
+03/21 10:31:23 AM | epoch46
+03/21 10:31:23 AM | using seed 46
+468it [02:47,  2.88it/s]03/21 10:34:12 AM | Train: [47/100] Step 468/468 Loss 0.122 Acc@(1) 95.8%
+469it [02:48,  2.79it/s]
+03/21 10:34:12 AM | Train: [47/100] Final Prec@1 95.8333%
+03/21 10:34:27 AM | Valid: [47/100] Final Prec@1 96.6067%; lambda = 0.0001
+03/21 10:34:27 AM | Quality: 0.9660666666666666
+
+
+03/21 10:34:42 AM | Valid: [47/100] Final Prec@1 96.5867%; lambda = 0.001
+03/21 10:34:43 AM | Quality: 0.9658666666984558
+
+
+03/21 10:34:58 AM | Valid: [47/100] Final Prec@1 96.6967%; lambda = 0.01
+03/21 10:34:58 AM | Quality: 0.966966666730245
+
+
+03/21 10:35:13 AM | Valid: [47/100] Final Prec@1 94.3600%; lambda = 0.1
+03/21 10:35:13 AM | Quality: 0.9436000000317891
+
+
+03/21 10:35:13 AM | epoch47
+03/21 10:35:13 AM | using seed 47
+468it [02:46,  3.00it/s]03/21 10:38:01 AM | Train: [48/100] Step 468/468 Loss 0.134 Acc@(1) 95.8%
+469it [02:46,  2.81it/s]
+03/21 10:38:01 AM | Train: [48/100] Final Prec@1 95.8333%
+03/21 10:38:16 AM | Valid: [48/100] Final Prec@1 95.5867%; lambda = 0.0001
+03/21 10:38:16 AM | Quality: 0.9558666666984558
+
+
+03/21 10:38:31 AM | Valid: [48/100] Final Prec@1 95.6233%; lambda = 0.001
+03/21 10:38:32 AM | Quality: 0.9562333333333334
+
+
+03/21 10:38:47 AM | Valid: [48/100] Final Prec@1 95.8700%; lambda = 0.01
+03/21 10:38:47 AM | Quality: 0.9587000000635783
+
+
+03/21 10:39:02 AM | Valid: [48/100] Final Prec@1 96.1767%; lambda = 0.1
+03/21 10:39:02 AM | Quality: 0.9617666666984558
+
+
+03/21 10:39:02 AM | epoch48
+03/21 10:39:02 AM | using seed 48
+468it [02:46,  2.98it/s]03/21 10:41:49 AM | Train: [49/100] Step 468/468 Loss 0.134 Acc@(1) 97.9%
+469it [02:46,  2.81it/s]
+03/21 10:41:49 AM | Train: [49/100] Final Prec@1 97.9167%
+03/21 10:42:05 AM | Valid: [49/100] Final Prec@1 96.8633%; lambda = 0.0001
+03/21 10:42:05 AM | Quality: 0.9686333333969116
+
+
+03/21 10:42:20 AM | Valid: [49/100] Final Prec@1 96.8900%; lambda = 0.001
+03/21 10:42:20 AM | Quality: 0.9689
+
+
+03/21 10:42:35 AM | Valid: [49/100] Final Prec@1 96.8600%; lambda = 0.01
+03/21 10:42:35 AM | Quality: 0.9686000000317891
+
+
+03/21 10:42:51 AM | Valid: [49/100] Final Prec@1 91.6600%; lambda = 0.1
+03/21 10:42:51 AM | Quality: 0.9166000000635783
+
+
+03/21 10:42:51 AM | epoch49
+03/21 10:42:51 AM | using seed 49
+468it [02:48,  2.78it/s]03/21 10:45:40 AM | Train: [50/100] Step 468/468 Loss 0.133 Acc@(1) 91.7%
+469it [02:49,  2.77it/s]
+03/21 10:45:40 AM | Train: [50/100] Final Prec@1 91.6667%
+03/21 10:45:56 AM | Valid: [50/100] Final Prec@1 96.5367%; lambda = 0.0001
+03/21 10:45:56 AM | Quality: 0.9653666666666667
+
+
+03/21 10:46:11 AM | Valid: [50/100] Final Prec@1 96.6200%; lambda = 0.001
+03/21 10:46:11 AM | Quality: 0.9662000000317892
+
+
+03/21 10:46:27 AM | Valid: [50/100] Final Prec@1 96.7167%; lambda = 0.01
+03/21 10:46:27 AM | Quality: 0.9671666666666666
+
+
+03/21 10:46:43 AM | Valid: [50/100] Final Prec@1 95.4800%; lambda = 0.1
+03/21 10:46:43 AM | Quality: 0.9548
+
+
+03/21 10:46:43 AM | epoch50
+03/21 10:46:43 AM | using seed 50
+468it [02:45,  3.07it/s]03/21 10:49:29 AM | Train: [51/100] Step 468/468 Loss 0.130 Acc@(1) 93.8%
+469it [02:45,  2.83it/s]
+03/21 10:49:29 AM | Train: [51/100] Final Prec@1 93.7500%
+03/21 10:49:45 AM | Valid: [51/100] Final Prec@1 93.6600%; lambda = 0.0001
+03/21 10:49:45 AM | Quality: 0.9366
+
+
+03/21 10:50:00 AM | Valid: [51/100] Final Prec@1 93.7267%; lambda = 0.001
+03/21 10:50:00 AM | Quality: 0.9372666666984558
+
+
+03/21 10:50:16 AM | Valid: [51/100] Final Prec@1 94.1967%; lambda = 0.01
+03/21 10:50:16 AM | Quality: 0.9419666666666666
+
+
+03/21 10:50:31 AM | Valid: [51/100] Final Prec@1 95.6700%; lambda = 0.1
+03/21 10:50:31 AM | Quality: 0.9567
+
+
+03/21 10:50:31 AM | epoch51
+03/21 10:50:31 AM | using seed 51
+468it [02:45,  3.05it/s]03/21 10:53:18 AM | Train: [52/100] Step 468/468 Loss 0.129 Acc@(1) 97.9%
+469it [02:46,  2.82it/s]
+03/21 10:53:18 AM | Train: [52/100] Final Prec@1 97.9167%
+03/21 10:53:33 AM | Valid: [52/100] Final Prec@1 96.4933%; lambda = 0.0001
+03/21 10:53:33 AM | Quality: 0.9649333333651224
+
+
+03/21 10:53:49 AM | Valid: [52/100] Final Prec@1 96.4867%; lambda = 0.001
+03/21 10:53:49 AM | Quality: 0.9648666666984558
+
+
+03/21 10:54:04 AM | Valid: [52/100] Final Prec@1 96.5667%; lambda = 0.01
+03/21 10:54:04 AM | Quality: 0.9656666666666667
+
+
+03/21 10:54:19 AM | Valid: [52/100] Final Prec@1 95.4133%; lambda = 0.1
+03/21 10:54:19 AM | Quality: 0.9541333333969116
+
+
+03/21 10:54:19 AM | epoch52
+03/21 10:54:19 AM | using seed 52
+468it [02:46,  3.10it/s]03/21 10:57:07 AM | Train: [53/100] Step 468/468 Loss 0.131 Acc@(1) 95.8%
+469it [02:47,  2.80it/s]
+03/21 10:57:07 AM | Train: [53/100] Final Prec@1 95.8333%
+03/21 10:57:23 AM | Valid: [53/100] Final Prec@1 96.1667%; lambda = 0.0001
+03/21 10:57:23 AM | Quality: 0.9616666666984558
+
+
+03/21 10:57:39 AM | Valid: [53/100] Final Prec@1 96.3333%; lambda = 0.001
+03/21 10:57:39 AM | Quality: 0.9633333333969116
+
+
+03/21 10:57:55 AM | Valid: [53/100] Final Prec@1 96.4033%; lambda = 0.01
+03/21 10:57:55 AM | Quality: 0.9640333333969117
+
+
+03/21 10:58:11 AM | Valid: [53/100] Final Prec@1 95.0267%; lambda = 0.1
+03/21 10:58:11 AM | Quality: 0.9502666666984558
+
+
+03/21 10:58:11 AM | epoch53
+03/21 10:58:11 AM | using seed 53
+468it [02:46,  3.01it/s]03/21 11:00:58 AM | Train: [54/100] Step 468/468 Loss 0.135 Acc@(1) 95.8%
+469it [02:46,  2.81it/s]
+03/21 11:00:58 AM | Train: [54/100] Final Prec@1 95.8333%
+03/21 11:01:13 AM | Valid: [54/100] Final Prec@1 96.7400%; lambda = 0.0001
+03/21 11:01:13 AM | Quality: 0.9674
+
+
+03/21 11:01:29 AM | Valid: [54/100] Final Prec@1 96.8433%; lambda = 0.001
+03/21 11:01:29 AM | Quality: 0.9684333333651225
+
+
+03/21 11:01:44 AM | Valid: [54/100] Final Prec@1 96.8733%; lambda = 0.01
+03/21 11:01:44 AM | Quality: 0.9687333333969116
+
+
+03/21 11:02:00 AM | Valid: [54/100] Final Prec@1 94.9567%; lambda = 0.1
+03/21 11:02:00 AM | Quality: 0.9495666666666667
+
+
+03/21 11:02:00 AM | epoch54
+03/21 11:02:00 AM | using seed 54
+468it [02:48,  3.01it/s]03/21 11:04:48 AM | Train: [55/100] Step 468/468 Loss 0.128 Acc@(1) 97.9%
+469it [02:48,  2.78it/s]
+03/21 11:04:49 AM | Train: [55/100] Final Prec@1 97.9167%
+03/21 11:05:04 AM | Valid: [55/100] Final Prec@1 97.0533%; lambda = 0.0001
+03/21 11:05:04 AM | Quality: 0.9705333333969116
+
+
+03/21 11:05:20 AM | Valid: [55/100] Final Prec@1 96.7867%; lambda = 0.001
+03/21 11:05:20 AM | Quality: 0.9678666666666667
+
+
+03/21 11:05:36 AM | Valid: [55/100] Final Prec@1 97.0833%; lambda = 0.01
+03/21 11:05:36 AM | Quality: 0.9708333333333333
+
+
+03/21 11:05:52 AM | Valid: [55/100] Final Prec@1 93.6367%; lambda = 0.1
+03/21 11:05:52 AM | Quality: 0.9363666666666667
+
+
+03/21 11:05:52 AM | epoch55
+03/21 11:05:52 AM | using seed 55
+468it [02:46,  3.13it/s]03/21 11:08:39 AM | Train: [56/100] Step 468/468 Loss 0.140 Acc@(1) 100.0%
+469it [02:46,  2.82it/s]
+03/21 11:08:39 AM | Train: [56/100] Final Prec@1 100.0000%
+03/21 11:08:54 AM | Valid: [56/100] Final Prec@1 95.7200%; lambda = 0.0001
+03/21 11:08:54 AM | Quality: 0.9572000000635783
+
+
+03/21 11:09:09 AM | Valid: [56/100] Final Prec@1 95.6967%; lambda = 0.001
+03/21 11:09:09 AM | Quality: 0.956966666730245
+
+
+03/21 11:09:25 AM | Valid: [56/100] Final Prec@1 95.8600%; lambda = 0.01
+03/21 11:09:25 AM | Quality: 0.9586
+
+
+03/21 11:09:40 AM | Valid: [56/100] Final Prec@1 94.9467%; lambda = 0.1
+03/21 11:09:40 AM | Quality: 0.9494666666666667
+
+
+03/21 11:09:40 AM | epoch56
+03/21 11:09:40 AM | using seed 56
+468it [02:46,  3.12it/s]03/21 11:12:27 AM | Train: [57/100] Step 468/468 Loss 0.143 Acc@(1) 95.8%
+469it [02:47,  2.81it/s]
+03/21 11:12:27 AM | Train: [57/100] Final Prec@1 95.8333%
+03/21 11:12:43 AM | Valid: [57/100] Final Prec@1 96.5200%; lambda = 0.0001
+03/21 11:12:43 AM | Quality: 0.9652000000635783
+
+
+03/21 11:12:58 AM | Valid: [57/100] Final Prec@1 96.5367%; lambda = 0.001
+03/21 11:12:58 AM | Quality: 0.9653666666984558
+
+
+03/21 11:13:14 AM | Valid: [57/100] Final Prec@1 96.3800%; lambda = 0.01
+03/21 11:13:14 AM | Quality: 0.9638000000635782
+
+
+03/21 11:13:29 AM | Valid: [57/100] Final Prec@1 91.8733%; lambda = 0.1
+03/21 11:13:29 AM | Quality: 0.9187333333333333
+
+
+03/21 11:13:29 AM | epoch57
+03/21 11:13:29 AM | using seed 57
+468it [02:45,  2.76it/s]03/21 11:16:16 AM | Train: [58/100] Step 468/468 Loss 0.136 Acc@(1) 95.8%
+469it [02:46,  2.82it/s]
+03/21 11:16:16 AM | Train: [58/100] Final Prec@1 95.8333%
+03/21 11:16:31 AM | Valid: [58/100] Final Prec@1 96.8567%; lambda = 0.0001
+03/21 11:16:31 AM | Quality: 0.9685666666666667
+
+
+03/21 11:16:46 AM | Valid: [58/100] Final Prec@1 96.9233%; lambda = 0.001
+03/21 11:16:46 AM | Quality: 0.9692333333969116
+
+
+03/21 11:17:01 AM | Valid: [58/100] Final Prec@1 96.8133%; lambda = 0.01
+03/21 11:17:01 AM | Quality: 0.9681333333969117
+
+
+03/21 11:17:17 AM | Valid: [58/100] Final Prec@1 92.0567%; lambda = 0.1
+03/21 11:17:17 AM | Quality: 0.920566666730245
+
+
+03/21 11:17:17 AM | epoch58
+03/21 11:17:17 AM | using seed 58
+468it [02:46,  3.10it/s]03/21 11:20:04 AM | Train: [59/100] Step 468/468 Loss 0.142 Acc@(1) 85.4%
+469it [02:46,  2.81it/s]
+03/21 11:20:04 AM | Train: [59/100] Final Prec@1 85.4167%
+03/21 11:20:19 AM | Valid: [59/100] Final Prec@1 96.6067%; lambda = 0.0001
+03/21 11:20:19 AM | Quality: 0.9660666666984558
+
+
+03/21 11:20:35 AM | Valid: [59/100] Final Prec@1 96.4133%; lambda = 0.001
+03/21 11:20:35 AM | Quality: 0.9641333333969117
+
+
+03/21 11:20:50 AM | Valid: [59/100] Final Prec@1 96.7333%; lambda = 0.01
+03/21 11:20:50 AM | Quality: 0.9673333333651225
+
+
+03/21 11:21:05 AM | Valid: [59/100] Final Prec@1 93.0367%; lambda = 0.1
+03/21 11:21:05 AM | Quality: 0.9303666667302449
+
+
+03/21 11:21:05 AM | epoch59
+03/21 11:21:05 AM | using seed 59
+468it [02:46,  2.88it/s]03/21 11:23:53 AM | Train: [60/100] Step 468/468 Loss 0.142 Acc@(1) 91.7%
+469it [02:47,  2.80it/s]
+03/21 11:23:53 AM | Train: [60/100] Final Prec@1 91.6667%
+03/21 11:24:09 AM | Valid: [60/100] Final Prec@1 97.0167%; lambda = 0.0001
+03/21 11:24:09 AM | Quality: 0.970166666730245
+
+
+03/21 11:24:24 AM | Valid: [60/100] Final Prec@1 97.1167%; lambda = 0.001
+03/21 11:24:24 AM | Quality: 0.9711666666984559
+
+
+03/21 11:24:40 AM | Valid: [60/100] Final Prec@1 97.1300%; lambda = 0.01
+03/21 11:24:40 AM | Quality: 0.9713
+
+
+03/21 11:24:55 AM | Valid: [60/100] Final Prec@1 93.6600%; lambda = 0.1
+03/21 11:24:55 AM | Quality: 0.9366
+
+
+03/21 11:24:55 AM | epoch60
+03/21 11:24:55 AM | using seed 60
+468it [02:45,  2.90it/s]03/21 11:27:42 AM | Train: [61/100] Step 468/468 Loss 0.152 Acc@(1) 95.8%
+469it [02:46,  2.82it/s]
+03/21 11:27:42 AM | Train: [61/100] Final Prec@1 95.8333%
+03/21 11:27:57 AM | Valid: [61/100] Final Prec@1 95.7033%; lambda = 0.0001
+03/21 11:27:57 AM | Quality: 0.9570333333333333
+
+
+03/21 11:28:12 AM | Valid: [61/100] Final Prec@1 95.7500%; lambda = 0.001
+03/21 11:28:12 AM | Quality: 0.9575
+
+
+03/21 11:28:27 AM | Valid: [61/100] Final Prec@1 95.9600%; lambda = 0.01
+03/21 11:28:27 AM | Quality: 0.9596000000635783
+
+
+03/21 11:28:42 AM | Valid: [61/100] Final Prec@1 94.9000%; lambda = 0.1
+03/21 11:28:42 AM | Quality: 0.949
+
+
+03/21 11:28:42 AM | epoch61
+03/21 11:28:42 AM | using seed 61
+468it [02:45,  3.08it/s]03/21 11:31:29 AM | Train: [62/100] Step 468/468 Loss 0.147 Acc@(1) 100.0%
+469it [02:46,  2.82it/s]
+03/21 11:31:29 AM | Train: [62/100] Final Prec@1 100.0000%
+03/21 11:31:44 AM | Valid: [62/100] Final Prec@1 96.9133%; lambda = 0.0001
+03/21 11:31:44 AM | Quality: 0.9691333333651225
+
+
+03/21 11:32:00 AM | Valid: [62/100] Final Prec@1 96.9100%; lambda = 0.001
+03/21 11:32:00 AM | Quality: 0.9691
+
+
+03/21 11:32:15 AM | Valid: [62/100] Final Prec@1 96.6633%; lambda = 0.01
+03/21 11:32:15 AM | Quality: 0.9666333333333333
+
+
+03/21 11:32:30 AM | Valid: [62/100] Final Prec@1 92.6000%; lambda = 0.1
+03/21 11:32:30 AM | Quality: 0.9260000000317892
+
+
+03/21 11:32:30 AM | epoch62
+03/21 11:32:30 AM | using seed 62
+468it [02:46,  2.92it/s]03/21 11:35:17 AM | Train: [63/100] Step 468/468 Loss 0.150 Acc@(1) 95.8%
+469it [02:46,  2.81it/s]
+03/21 11:35:17 AM | Train: [63/100] Final Prec@1 95.8333%
+03/21 11:35:33 AM | Valid: [63/100] Final Prec@1 96.3733%; lambda = 0.0001
+03/21 11:35:33 AM | Quality: 0.9637333333651225
+
+
+03/21 11:35:48 AM | Valid: [63/100] Final Prec@1 96.3767%; lambda = 0.001
+03/21 11:35:48 AM | Quality: 0.9637666667302449
+
+
+03/21 11:36:03 AM | Valid: [63/100] Final Prec@1 96.4367%; lambda = 0.01
+03/21 11:36:03 AM | Quality: 0.9643666666984558
+
+
+03/21 11:36:18 AM | Valid: [63/100] Final Prec@1 96.0000%; lambda = 0.1
+03/21 11:36:18 AM | Quality: 0.9600000000635783
+
+
+03/21 11:36:18 AM | epoch63
+03/21 11:36:18 AM | using seed 63
+468it [02:44,  2.96it/s]03/21 11:39:04 AM | Train: [64/100] Step 468/468 Loss 0.152 Acc@(1) 95.8%
+469it [02:45,  2.84it/s]
+03/21 11:39:04 AM | Train: [64/100] Final Prec@1 95.8333%
+03/21 11:39:20 AM | Valid: [64/100] Final Prec@1 96.7333%; lambda = 0.0001
+03/21 11:39:20 AM | Quality: 0.9673333333651225
+
+
+03/21 11:39:35 AM | Valid: [64/100] Final Prec@1 96.6633%; lambda = 0.001
+03/21 11:39:35 AM | Quality: 0.9666333333651225
+
+
+03/21 11:39:50 AM | Valid: [64/100] Final Prec@1 96.8733%; lambda = 0.01
+03/21 11:39:50 AM | Quality: 0.9687333333333333
+
+
+03/21 11:40:05 AM | Valid: [64/100] Final Prec@1 95.7233%; lambda = 0.1
+03/21 11:40:05 AM | Quality: 0.9572333333333334
+
+
+03/21 11:40:05 AM | epoch64
+03/21 11:40:05 AM | using seed 64
+468it [02:45,  3.16it/s]03/21 11:42:51 AM | Train: [65/100] Step 468/468 Loss 0.137 Acc@(1) 91.7%
+469it [02:46,  2.82it/s]
+03/21 11:42:52 AM | Train: [65/100] Final Prec@1 91.6667%
+03/21 11:43:07 AM | Valid: [65/100] Final Prec@1 95.9333%; lambda = 0.0001
+03/21 11:43:07 AM | Quality: 0.9593333333651225
+
+
+03/21 11:43:22 AM | Valid: [65/100] Final Prec@1 96.0533%; lambda = 0.001
+03/21 11:43:22 AM | Quality: 0.9605333333969116
+
+
+03/21 11:43:37 AM | Valid: [65/100] Final Prec@1 96.1433%; lambda = 0.01
+03/21 11:43:37 AM | Quality: 0.9614333333969116
+
+
+03/21 11:43:52 AM | Valid: [65/100] Final Prec@1 96.5300%; lambda = 0.1
+03/21 11:43:52 AM | Quality: 0.9653000000317892
+
+
+03/21 11:43:52 AM | epoch65
+03/21 11:43:52 AM | using seed 65
+468it [02:47,  3.14it/s]03/21 11:46:40 AM | Train: [66/100] Step 468/468 Loss 0.149 Acc@(1) 97.9%
+469it [02:48,  2.79it/s]
+03/21 11:46:41 AM | Train: [66/100] Final Prec@1 97.9167%
+03/21 11:46:56 AM | Valid: [66/100] Final Prec@1 96.0200%; lambda = 0.0001
+03/21 11:46:56 AM | Quality: 0.9602000000635783
+
+
+03/21 11:47:12 AM | Valid: [66/100] Final Prec@1 95.9967%; lambda = 0.001
+03/21 11:47:12 AM | Quality: 0.9599666666984558
+
+
+03/21 11:47:28 AM | Valid: [66/100] Final Prec@1 96.2067%; lambda = 0.01
+03/21 11:47:28 AM | Quality: 0.9620666666984559
+
+
+03/21 11:47:43 AM | Valid: [66/100] Final Prec@1 95.8100%; lambda = 0.1
+03/21 11:47:43 AM | Quality: 0.9581000000317892
+
+
+03/21 11:47:43 AM | epoch66
+03/21 11:47:43 AM | using seed 66
+468it [02:48,  3.10it/s]03/21 11:50:32 AM | Train: [67/100] Step 468/468 Loss 0.148 Acc@(1) 97.9%
+469it [02:48,  2.78it/s]
+03/21 11:50:32 AM | Train: [67/100] Final Prec@1 97.9167%
+03/21 11:50:47 AM | Valid: [67/100] Final Prec@1 96.8733%; lambda = 0.0001
+03/21 11:50:47 AM | Quality: 0.9687333333651225
+
+
+03/21 11:51:02 AM | Valid: [67/100] Final Prec@1 97.0267%; lambda = 0.001
+03/21 11:51:02 AM | Quality: 0.9702666666666667
+
+
+03/21 11:51:18 AM | Valid: [67/100] Final Prec@1 97.0100%; lambda = 0.01
+03/21 11:51:18 AM | Quality: 0.9701000000317891
+
+
+03/21 11:51:32 AM | Valid: [67/100] Final Prec@1 91.9733%; lambda = 0.1
+03/21 11:51:33 AM | Quality: 0.9197333333333333
+
+
+03/21 11:51:33 AM | epoch67
+03/21 11:51:33 AM | using seed 67
+468it [02:46,  3.07it/s]03/21 11:54:20 AM | Train: [68/100] Step 468/468 Loss 0.153 Acc@(1) 95.8%
+469it [02:46,  2.82it/s]
+03/21 11:54:20 AM | Train: [68/100] Final Prec@1 95.8333%
+03/21 11:54:35 AM | Valid: [68/100] Final Prec@1 97.1133%; lambda = 0.0001
+03/21 11:54:35 AM | Quality: 0.9711333333651225
+
+
+03/21 11:54:51 AM | Valid: [68/100] Final Prec@1 97.0133%; lambda = 0.001
+03/21 11:54:51 AM | Quality: 0.9701333333651225
+
+
+03/21 11:55:06 AM | Valid: [68/100] Final Prec@1 97.0267%; lambda = 0.01
+03/21 11:55:06 AM | Quality: 0.9702666666984558
+
+
+03/21 11:55:22 AM | Valid: [68/100] Final Prec@1 93.7433%; lambda = 0.1
+03/21 11:55:22 AM | Quality: 0.9374333333333333
+
+
+03/21 11:55:22 AM | epoch68
+03/21 11:55:22 AM | using seed 68
+468it [02:46,  3.03it/s]03/21 11:58:09 AM | Train: [69/100] Step 468/468 Loss 0.160 Acc@(1) 100.0%
+469it [02:47,  2.80it/s]
+03/21 11:58:09 AM | Train: [69/100] Final Prec@1 100.0000%
+03/21 11:58:25 AM | Valid: [69/100] Final Prec@1 97.0767%; lambda = 0.0001
+03/21 11:58:25 AM | Quality: 0.9707666666984558
+
+
+03/21 11:58:40 AM | Valid: [69/100] Final Prec@1 97.0600%; lambda = 0.001
+03/21 11:58:40 AM | Quality: 0.9706
+
+
+03/21 11:58:55 AM | Valid: [69/100] Final Prec@1 97.0433%; lambda = 0.01
+03/21 11:58:55 AM | Quality: 0.9704333333651225
+
+
+03/21 11:59:11 AM | Valid: [69/100] Final Prec@1 91.6167%; lambda = 0.1
+03/21 11:59:11 AM | Quality: 0.9161666667302449
+
+
+03/21 11:59:11 AM | epoch69
+03/21 11:59:11 AM | using seed 69
+468it [02:45,  2.93it/s]03/21 12:01:57 PM | Train: [70/100] Step 468/468 Loss 0.150 Acc@(1) 91.7%
+469it [02:46,  2.82it/s]
+03/21 12:01:57 PM | Train: [70/100] Final Prec@1 91.6667%
+03/21 12:02:12 PM | Valid: [70/100] Final Prec@1 90.4067%; lambda = 0.0001
+03/21 12:02:12 PM | Quality: 0.9040666666984558
+
+
+03/21 12:02:28 PM | Valid: [70/100] Final Prec@1 90.6400%; lambda = 0.001
+03/21 12:02:28 PM | Quality: 0.9064
+
+
+03/21 12:02:43 PM | Valid: [70/100] Final Prec@1 91.0633%; lambda = 0.01
+03/21 12:02:43 PM | Quality: 0.9106333333651225
+
+
+03/21 12:02:58 PM | Valid: [70/100] Final Prec@1 94.1200%; lambda = 0.1
+03/21 12:02:58 PM | Quality: 0.9412
+
+
+03/21 12:02:58 PM | epoch70
+03/21 12:02:58 PM | using seed 70
+468it [02:47,  3.10it/s]03/21 12:05:47 PM | Train: [71/100] Step 468/468 Loss 0.166 Acc@(1) 97.9%
+469it [02:47,  2.79it/s]
+03/21 12:05:47 PM | Train: [71/100] Final Prec@1 97.9167%
+03/21 12:06:02 PM | Valid: [71/100] Final Prec@1 96.3233%; lambda = 0.0001
+03/21 12:06:02 PM | Quality: 0.9632333333651225
+
+
+03/21 12:06:18 PM | Valid: [71/100] Final Prec@1 96.5900%; lambda = 0.001
+03/21 12:06:18 PM | Quality: 0.9659
+
+
+03/21 12:06:33 PM | Valid: [71/100] Final Prec@1 96.3833%; lambda = 0.01
+03/21 12:06:33 PM | Quality: 0.9638333333969116
+
+
+03/21 12:06:49 PM | Valid: [71/100] Final Prec@1 94.5333%; lambda = 0.1
+03/21 12:06:49 PM | Quality: 0.9453333333651225
+
+
+03/21 12:06:49 PM | epoch71
+03/21 12:06:49 PM | using seed 71
+468it [02:45,  3.03it/s]03/21 12:09:35 PM | Train: [72/100] Step 468/468 Loss 0.163 Acc@(1) 89.6%
+469it [02:46,  2.82it/s]
+03/21 12:09:35 PM | Train: [72/100] Final Prec@1 89.5833%
+03/21 12:09:50 PM | Valid: [72/100] Final Prec@1 91.8100%; lambda = 0.0001
+03/21 12:09:51 PM | Quality: 0.9181
+
+
+03/21 12:10:06 PM | Valid: [72/100] Final Prec@1 91.8367%; lambda = 0.001
+03/21 12:10:06 PM | Quality: 0.9183666667302449
+
+
+03/21 12:10:21 PM | Valid: [72/100] Final Prec@1 92.3367%; lambda = 0.01
+03/21 12:10:21 PM | Quality: 0.9233666666984558
+
+
+03/21 12:10:36 PM | Valid: [72/100] Final Prec@1 92.1133%; lambda = 0.1
+03/21 12:10:36 PM | Quality: 0.9211333333333334
+
+
+03/21 12:10:36 PM | epoch72
+03/21 12:10:36 PM | using seed 72
+468it [02:45,  3.15it/s]03/21 12:13:23 PM | Train: [73/100] Step 468/468 Loss 0.168 Acc@(1) 97.9%
+469it [02:45,  2.83it/s]
+03/21 12:13:23 PM | Train: [73/100] Final Prec@1 97.9167%
+03/21 12:13:38 PM | Valid: [73/100] Final Prec@1 96.5767%; lambda = 0.0001
+03/21 12:13:38 PM | Quality: 0.9657666667302449
+
+
+03/21 12:13:53 PM | Valid: [73/100] Final Prec@1 96.4333%; lambda = 0.001
+03/21 12:13:53 PM | Quality: 0.9643333333651225
+
+
+03/21 12:14:08 PM | Valid: [73/100] Final Prec@1 96.4333%; lambda = 0.01
+03/21 12:14:08 PM | Quality: 0.9643333333333334
+
+
+03/21 12:14:24 PM | Valid: [73/100] Final Prec@1 90.4167%; lambda = 0.1
+03/21 12:14:24 PM | Quality: 0.9041666666984558
+
+
+03/21 12:14:24 PM | epoch73
+03/21 12:14:24 PM | using seed 73
+468it [02:46,  3.11it/s]03/21 12:17:11 PM | Train: [74/100] Step 468/468 Loss 0.173 Acc@(1) 93.8%
+469it [02:47,  2.81it/s]
+03/21 12:17:11 PM | Train: [74/100] Final Prec@1 93.7500%
+03/21 12:17:27 PM | Valid: [74/100] Final Prec@1 96.7467%; lambda = 0.0001
+03/21 12:17:27 PM | Quality: 0.967466666730245
+
+
+03/21 12:17:43 PM | Valid: [74/100] Final Prec@1 96.7167%; lambda = 0.001
+03/21 12:17:43 PM | Quality: 0.9671666666666666
+
+
+03/21 12:17:58 PM | Valid: [74/100] Final Prec@1 96.7200%; lambda = 0.01
+03/21 12:17:58 PM | Quality: 0.9672000000317892
+
+
+03/21 12:18:13 PM | Valid: [74/100] Final Prec@1 92.6700%; lambda = 0.1
+03/21 12:18:13 PM | Quality: 0.9267000000317891
+
+
+03/21 12:18:13 PM | epoch74
+03/21 12:18:13 PM | using seed 74
+468it [02:45,  3.02it/s]03/21 12:20:59 PM | Train: [75/100] Step 468/468 Loss 0.167 Acc@(1) 100.0%
+469it [02:45,  2.83it/s]
+03/21 12:20:59 PM | Train: [75/100] Final Prec@1 100.0000%
+03/21 12:21:14 PM | Valid: [75/100] Final Prec@1 96.6933%; lambda = 0.0001
+03/21 12:21:14 PM | Quality: 0.9669333333333333
+
+
+03/21 12:21:29 PM | Valid: [75/100] Final Prec@1 96.7933%; lambda = 0.001
+03/21 12:21:29 PM | Quality: 0.9679333333969116
+
+
+03/21 12:21:44 PM | Valid: [75/100] Final Prec@1 96.6167%; lambda = 0.01
+03/21 12:21:44 PM | Quality: 0.9661666666666666
+
+
+03/21 12:21:59 PM | Valid: [75/100] Final Prec@1 90.0800%; lambda = 0.1
+03/21 12:21:59 PM | Quality: 0.9008000000317892
+
+
+03/21 12:21:59 PM | epoch75
+03/21 12:21:59 PM | using seed 75
+468it [02:45,  3.06it/s]03/21 12:24:46 PM | Train: [76/100] Step 468/468 Loss 0.176 Acc@(1) 95.8%
+469it [02:46,  2.82it/s]
+03/21 12:24:46 PM | Train: [76/100] Final Prec@1 95.8333%
+03/21 12:25:01 PM | Valid: [76/100] Final Prec@1 96.1233%; lambda = 0.0001
+03/21 12:25:01 PM | Quality: 0.9612333333333334
+
+
+03/21 12:25:17 PM | Valid: [76/100] Final Prec@1 96.1433%; lambda = 0.001
+03/21 12:25:17 PM | Quality: 0.9614333333969116
+
+
+03/21 12:25:32 PM | Valid: [76/100] Final Prec@1 96.1567%; lambda = 0.01
+03/21 12:25:32 PM | Quality: 0.9615666666984558
+
+
+03/21 12:25:48 PM | Valid: [76/100] Final Prec@1 94.7467%; lambda = 0.1
+03/21 12:25:48 PM | Quality: 0.9474666666666667
+
+
+03/21 12:25:48 PM | epoch76
+03/21 12:25:48 PM | using seed 76
+468it [02:45,  3.05it/s]03/21 12:28:34 PM | Train: [77/100] Step 468/468 Loss 0.174 Acc@(1) 93.8%
+469it [02:45,  2.83it/s]
+03/21 12:28:34 PM | Train: [77/100] Final Prec@1 93.7500%
+03/21 12:28:49 PM | Valid: [77/100] Final Prec@1 96.9067%; lambda = 0.0001
+03/21 12:28:49 PM | Quality: 0.9690666666666666
+
+
+03/21 12:29:04 PM | Valid: [77/100] Final Prec@1 96.9433%; lambda = 0.001
+03/21 12:29:04 PM | Quality: 0.9694333333651225
+
+
+03/21 12:29:20 PM | Valid: [77/100] Final Prec@1 96.9800%; lambda = 0.01
+03/21 12:29:20 PM | Quality: 0.9698000000635782
+
+
+03/21 12:29:35 PM | Valid: [77/100] Final Prec@1 93.3400%; lambda = 0.1
+03/21 12:29:35 PM | Quality: 0.9334000000317891
+
+
+03/21 12:29:35 PM | epoch77
+03/21 12:29:35 PM | using seed 77
+468it [02:46,  3.06it/s]03/21 12:32:22 PM | Train: [78/100] Step 468/468 Loss 0.177 Acc@(1) 81.2%
+469it [02:46,  2.81it/s]
+03/21 12:32:22 PM | Train: [78/100] Final Prec@1 81.2500%
+03/21 12:32:38 PM | Valid: [78/100] Final Prec@1 84.4367%; lambda = 0.0001
+03/21 12:32:38 PM | Quality: 0.844366666730245
+
+
+03/21 12:32:53 PM | Valid: [78/100] Final Prec@1 84.6200%; lambda = 0.001
+03/21 12:32:53 PM | Quality: 0.8462000000635783
+
+
+03/21 12:33:08 PM | Valid: [78/100] Final Prec@1 85.4767%; lambda = 0.01
+03/21 12:33:08 PM | Quality: 0.8547666666984558
+
+
+03/21 12:33:24 PM | Valid: [78/100] Final Prec@1 89.2867%; lambda = 0.1
+03/21 12:33:24 PM | Quality: 0.8928666666666667
+
+
+03/21 12:33:24 PM | epoch78
+03/21 12:33:24 PM | using seed 78
+468it [02:49,  2.88it/s]03/21 12:36:14 PM | Train: [79/100] Step 468/468 Loss 0.192 Acc@(1) 97.9%
+469it [02:50,  2.76it/s]
+03/21 12:36:14 PM | Train: [79/100] Final Prec@1 97.9167%
+03/21 12:36:30 PM | Valid: [79/100] Final Prec@1 95.5100%; lambda = 0.0001
+03/21 12:36:30 PM | Quality: 0.9551000000317892
+
+
+03/21 12:36:46 PM | Valid: [79/100] Final Prec@1 95.5967%; lambda = 0.001
+03/21 12:36:46 PM | Quality: 0.955966666730245
+
+
+03/21 12:37:01 PM | Valid: [79/100] Final Prec@1 95.7067%; lambda = 0.01
+03/21 12:37:02 PM | Quality: 0.957066666730245
+
+
+03/21 12:37:17 PM | Valid: [79/100] Final Prec@1 94.6967%; lambda = 0.1
+03/21 12:37:17 PM | Quality: 0.9469666666984559
+
+
+03/21 12:37:17 PM | epoch79
+03/21 12:37:17 PM | using seed 79
+468it [02:48,  3.11it/s]03/21 12:40:07 PM | Train: [80/100] Step 468/468 Loss 0.176 Acc@(1) 97.9%
+469it [02:49,  2.77it/s]
+03/21 12:40:07 PM | Train: [80/100] Final Prec@1 97.9167%
+03/21 12:40:22 PM | Valid: [80/100] Final Prec@1 96.7200%; lambda = 0.0001
+03/21 12:40:22 PM | Quality: 0.9672
+
+
+03/21 12:40:37 PM | Valid: [80/100] Final Prec@1 96.7800%; lambda = 0.001
+03/21 12:40:37 PM | Quality: 0.9678
+
+
+03/21 12:40:53 PM | Valid: [80/100] Final Prec@1 96.4933%; lambda = 0.01
+03/21 12:40:53 PM | Quality: 0.9649333333333333
+
+
+03/21 12:41:08 PM | Valid: [80/100] Final Prec@1 88.8400%; lambda = 0.1
+03/21 12:41:08 PM | Quality: 0.8884000000635783
+
+
+03/21 12:41:08 PM | epoch80
+03/21 12:41:08 PM | using seed 80
+468it [02:47,  3.10it/s]03/21 12:43:57 PM | Train: [81/100] Step 468/468 Loss 0.189 Acc@(1) 97.9%
+469it [02:48,  2.79it/s]
+03/21 12:43:57 PM | Train: [81/100] Final Prec@1 97.9167%
+03/21 12:44:13 PM | Valid: [81/100] Final Prec@1 96.3033%; lambda = 0.0001
+03/21 12:44:13 PM | Quality: 0.9630333333333333
+
+
+03/21 12:44:28 PM | Valid: [81/100] Final Prec@1 96.2967%; lambda = 0.001
+03/21 12:44:28 PM | Quality: 0.9629666666666666
+
+
+03/21 12:44:43 PM | Valid: [81/100] Final Prec@1 96.2200%; lambda = 0.01
+03/21 12:44:43 PM | Quality: 0.9622000000635783
+
+
+03/21 12:44:59 PM | Valid: [81/100] Final Prec@1 92.4600%; lambda = 0.1
+03/21 12:44:59 PM | Quality: 0.9246
+
+
+03/21 12:44:59 PM | epoch81
+03/21 12:44:59 PM | using seed 81
+468it [02:48,  2.97it/s]03/21 12:47:48 PM | Train: [82/100] Step 468/468 Loss 0.180 Acc@(1) 95.8%
+469it [02:48,  2.78it/s]
+03/21 12:47:48 PM | Train: [82/100] Final Prec@1 95.8333%
+03/21 12:48:04 PM | Valid: [82/100] Final Prec@1 90.0200%; lambda = 0.0001
+03/21 12:48:04 PM | Quality: 0.9002000000635783
+
+
+03/21 12:48:19 PM | Valid: [82/100] Final Prec@1 90.1367%; lambda = 0.001
+03/21 12:48:19 PM | Quality: 0.9013666666666666
+
+
+03/21 12:48:35 PM | Valid: [82/100] Final Prec@1 90.2033%; lambda = 0.01
+03/21 12:48:35 PM | Quality: 0.9020333333651225
+
+
+03/21 12:48:50 PM | Valid: [82/100] Final Prec@1 90.6633%; lambda = 0.1
+03/21 12:48:50 PM | Quality: 0.9066333333651225
+
+
+03/21 12:48:50 PM | epoch82
+03/21 12:48:50 PM | using seed 82
+468it [02:49,  2.80it/s]03/21 12:51:40 PM | Train: [83/100] Step 468/468 Loss 0.191 Acc@(1) 93.8%
+469it [02:49,  2.76it/s]
+03/21 12:51:41 PM | Train: [83/100] Final Prec@1 93.7500%
+03/21 12:51:56 PM | Valid: [83/100] Final Prec@1 96.3933%; lambda = 0.0001
+03/21 12:51:57 PM | Quality: 0.9639333333333333
+
+
+03/21 12:52:12 PM | Valid: [83/100] Final Prec@1 96.3400%; lambda = 0.001
+03/21 12:52:12 PM | Quality: 0.9634000000635783
+
+
+03/21 12:52:28 PM | Valid: [83/100] Final Prec@1 96.6000%; lambda = 0.01
+03/21 12:52:28 PM | Quality: 0.966
+
+
+03/21 12:52:43 PM | Valid: [83/100] Final Prec@1 94.0733%; lambda = 0.1
+03/21 12:52:43 PM | Quality: 0.9407333333651224
+
+
+03/21 12:52:43 PM | epoch83
+03/21 12:52:43 PM | using seed 83
+468it [02:49,  2.97it/s]03/21 12:55:33 PM | Train: [84/100] Step 468/468 Loss 0.185 Acc@(1) 95.8%
+469it [02:49,  2.76it/s]
+03/21 12:55:33 PM | Train: [84/100] Final Prec@1 95.8333%
+03/21 12:55:49 PM | Valid: [84/100] Final Prec@1 96.9600%; lambda = 0.0001
+03/21 12:55:49 PM | Quality: 0.9696000000317891
+
+
+03/21 12:56:05 PM | Valid: [84/100] Final Prec@1 96.8567%; lambda = 0.001
+03/21 12:56:05 PM | Quality: 0.9685666666666667
+
+
+03/21 12:56:21 PM | Valid: [84/100] Final Prec@1 96.8833%; lambda = 0.01
+03/21 12:56:21 PM | Quality: 0.9688333333969116
+
+
+03/21 12:56:36 PM | Valid: [84/100] Final Prec@1 90.8700%; lambda = 0.1
+03/21 12:56:36 PM | Quality: 0.9087000000317892
+
+
+03/21 12:56:36 PM | epoch84
+03/21 12:56:36 PM | using seed 84
+468it [02:50,  2.72it/s]03/21 12:59:27 PM | Train: [85/100] Step 468/468 Loss 0.185 Acc@(1) 87.5%
+469it [02:50,  2.75it/s]
+03/21 12:59:28 PM | Train: [85/100] Final Prec@1 87.5000%
+03/21 12:59:43 PM | Valid: [85/100] Final Prec@1 91.9700%; lambda = 0.0001
+03/21 12:59:43 PM | Quality: 0.9197000000317891
+
+
+03/21 12:59:59 PM | Valid: [85/100] Final Prec@1 91.9800%; lambda = 0.001
+03/21 12:59:59 PM | Quality: 0.9198
+
+
+03/21 01:00:15 PM | Valid: [85/100] Final Prec@1 91.7500%; lambda = 0.01
+03/21 01:00:15 PM | Quality: 0.9175000000317891
+
+
+03/21 01:00:31 PM | Valid: [85/100] Final Prec@1 90.4067%; lambda = 0.1
+03/21 01:00:31 PM | Quality: 0.9040666666984558
+
+
+03/21 01:00:31 PM | epoch85
+03/21 01:00:31 PM | using seed 85
+468it [02:46,  3.06it/s]03/21 01:03:18 PM | Train: [86/100] Step 468/468 Loss 0.177 Acc@(1) 95.8%
+469it [02:47,  2.80it/s]
+03/21 01:03:19 PM | Train: [86/100] Final Prec@1 95.8333%
+03/21 01:03:34 PM | Valid: [86/100] Final Prec@1 96.7467%; lambda = 0.0001
+03/21 01:03:34 PM | Quality: 0.967466666730245
+
+
+03/21 01:03:49 PM | Valid: [86/100] Final Prec@1 96.6633%; lambda = 0.001
+03/21 01:03:49 PM | Quality: 0.9666333333969116
+
+
+03/21 01:04:04 PM | Valid: [86/100] Final Prec@1 96.4933%; lambda = 0.01
+03/21 01:04:04 PM | Quality: 0.9649333333651224
+
+
+03/21 01:04:20 PM | Valid: [86/100] Final Prec@1 93.7267%; lambda = 0.1
+03/21 01:04:21 PM | Quality: 0.937266666730245
+
+
+03/21 01:04:21 PM | epoch86
+03/21 01:04:21 PM | using seed 86
+468it [02:48,  3.05it/s]03/21 01:07:10 PM | Train: [87/100] Step 468/468 Loss 0.197 Acc@(1) 95.8%
+469it [02:48,  2.78it/s]
+03/21 01:07:10 PM | Train: [87/100] Final Prec@1 95.8333%
+03/21 01:07:27 PM | Valid: [87/100] Final Prec@1 95.2400%; lambda = 0.0001
+03/21 01:07:27 PM | Quality: 0.9524
+
+
+03/21 01:07:42 PM | Valid: [87/100] Final Prec@1 95.2000%; lambda = 0.001
+03/21 01:07:42 PM | Quality: 0.9520000000317892
+
+
+03/21 01:07:58 PM | Valid: [87/100] Final Prec@1 95.2933%; lambda = 0.01
+03/21 01:07:58 PM | Quality: 0.9529333333651224
+
+
+03/21 01:08:14 PM | Valid: [87/100] Final Prec@1 92.9033%; lambda = 0.1
+03/21 01:08:14 PM | Quality: 0.9290333333333334
+
+
+03/21 01:08:14 PM | epoch87
+03/21 01:08:14 PM | using seed 87
+468it [02:48,  3.07it/s]03/21 01:11:03 PM | Train: [88/100] Step 468/468 Loss 0.203 Acc@(1) 95.8%
+469it [02:49,  2.77it/s]
+03/21 01:11:04 PM | Train: [88/100] Final Prec@1 95.8333%
+03/21 01:11:20 PM | Valid: [88/100] Final Prec@1 96.7733%; lambda = 0.0001
+03/21 01:11:20 PM | Quality: 0.9677333333969116
+
+
+03/21 01:11:35 PM | Valid: [88/100] Final Prec@1 96.8433%; lambda = 0.001
+03/21 01:11:35 PM | Quality: 0.9684333333969116
+
+
+03/21 01:11:51 PM | Valid: [88/100] Final Prec@1 96.5000%; lambda = 0.01
+03/21 01:11:51 PM | Quality: 0.9650000000317891
+
+
+03/21 01:12:07 PM | Valid: [88/100] Final Prec@1 91.5033%; lambda = 0.1
+03/21 01:12:07 PM | Quality: 0.9150333333651225
+
+
+03/21 01:12:07 PM | epoch88
+03/21 01:12:07 PM | using seed 88
+468it [02:49,  2.91it/s]03/21 01:14:58 PM | Train: [89/100] Step 468/468 Loss 0.219 Acc@(1) 93.8%
+469it [02:50,  2.76it/s]
+03/21 01:14:58 PM | Train: [89/100] Final Prec@1 93.7500%
+03/21 01:15:15 PM | Valid: [89/100] Final Prec@1 89.8067%; lambda = 0.0001
+03/21 01:15:15 PM | Quality: 0.8980666667302449
+
+
+03/21 01:15:31 PM | Valid: [89/100] Final Prec@1 89.8500%; lambda = 0.001
+03/21 01:15:31 PM | Quality: 0.8985
+
+
+03/21 01:15:47 PM | Valid: [89/100] Final Prec@1 89.2167%; lambda = 0.01
+03/21 01:15:47 PM | Quality: 0.8921666666666667
+
+
+03/21 01:16:03 PM | Valid: [89/100] Final Prec@1 84.7000%; lambda = 0.1
+03/21 01:16:03 PM | Quality: 0.847
+
+
+03/21 01:16:03 PM | epoch89
+03/21 01:16:03 PM | using seed 89
+468it [02:50,  2.99it/s]03/21 01:18:55 PM | Train: [90/100] Step 468/468 Loss 0.213 Acc@(1) 100.0%
+469it [02:51,  2.74it/s]
+03/21 01:18:55 PM | Train: [90/100] Final Prec@1 100.0000%
+03/21 01:19:11 PM | Valid: [90/100] Final Prec@1 95.6067%; lambda = 0.0001
+03/21 01:19:11 PM | Quality: 0.956066666730245
+
+
+03/21 01:19:28 PM | Valid: [90/100] Final Prec@1 95.5633%; lambda = 0.001
+03/21 01:19:28 PM | Quality: 0.9556333333969116
+
+
+03/21 01:19:43 PM | Valid: [90/100] Final Prec@1 95.2967%; lambda = 0.01
+03/21 01:19:43 PM | Quality: 0.952966666730245
+
+
+03/21 01:19:59 PM | Valid: [90/100] Final Prec@1 88.2700%; lambda = 0.1
+03/21 01:19:59 PM | Quality: 0.8827000000635783
+
+
+03/21 01:19:59 PM | epoch90
+03/21 01:19:59 PM | using seed 90
+468it [02:51,  2.86it/s]03/21 01:22:51 PM | Train: [91/100] Step 468/468 Loss 0.204 Acc@(1) 97.9%
+469it [02:51,  2.73it/s]
+03/21 01:22:51 PM | Train: [91/100] Final Prec@1 97.9167%
+03/21 01:23:08 PM | Valid: [91/100] Final Prec@1 94.9433%; lambda = 0.0001
+03/21 01:23:08 PM | Quality: 0.9494333333333334
+
+
+03/21 01:23:23 PM | Valid: [91/100] Final Prec@1 94.9800%; lambda = 0.001
+03/21 01:23:23 PM | Quality: 0.9498000000635783
+
+
+03/21 01:23:39 PM | Valid: [91/100] Final Prec@1 94.8700%; lambda = 0.01
+03/21 01:23:39 PM | Quality: 0.9487
+
+
+03/21 01:23:55 PM | Valid: [91/100] Final Prec@1 92.5200%; lambda = 0.1
+03/21 01:23:55 PM | Quality: 0.9252000000635783
+
+
+03/21 01:23:55 PM | epoch91
+03/21 01:23:55 PM | using seed 91
+468it [02:51,  3.02it/s]03/21 01:26:48 PM | Train: [92/100] Step 468/468 Loss 0.220 Acc@(1) 100.0%
+469it [02:52,  2.72it/s]
+03/21 01:26:48 PM | Train: [92/100] Final Prec@1 100.0000%
+03/21 01:27:04 PM | Valid: [92/100] Final Prec@1 95.8767%; lambda = 0.0001
+03/21 01:27:04 PM | Quality: 0.9587666667302449
+
+
+03/21 01:27:20 PM | Valid: [92/100] Final Prec@1 95.9100%; lambda = 0.001
+03/21 01:27:20 PM | Quality: 0.9591
+
+
+03/21 01:27:35 PM | Valid: [92/100] Final Prec@1 95.7000%; lambda = 0.01
+03/21 01:27:35 PM | Quality: 0.9570000000635783
+
+
+03/21 01:27:51 PM | Valid: [92/100] Final Prec@1 88.2267%; lambda = 0.1
+03/21 01:27:52 PM | Quality: 0.882266666730245
+
+
+03/21 01:27:52 PM | epoch92
+03/21 01:27:52 PM | using seed 92
+468it [02:50,  2.79it/s]03/21 01:30:43 PM | Train: [93/100] Step 468/468 Loss 0.221 Acc@(1) 95.8%
+469it [02:51,  2.74it/s]
+03/21 01:30:43 PM | Train: [93/100] Final Prec@1 95.8333%
+03/21 01:31:00 PM | Valid: [93/100] Final Prec@1 95.2267%; lambda = 0.0001
+03/21 01:31:00 PM | Quality: 0.9522666666984558
+
+
+03/21 01:31:16 PM | Valid: [93/100] Final Prec@1 95.5600%; lambda = 0.001
+03/21 01:31:16 PM | Quality: 0.9556000000635783
+
+
+03/21 01:31:33 PM | Valid: [93/100] Final Prec@1 95.2967%; lambda = 0.01
+03/21 01:31:33 PM | Quality: 0.9529666666666666
+
+
+03/21 01:31:49 PM | Valid: [93/100] Final Prec@1 91.6667%; lambda = 0.1
+03/21 01:31:49 PM | Quality: 0.9166666666666666
+
+
+03/21 01:31:49 PM | epoch93
+03/21 01:31:49 PM | using seed 93
+468it [02:50,  2.91it/s]03/21 01:34:40 PM | Train: [94/100] Step 468/468 Loss 0.214 Acc@(1) 93.8%
+469it [02:50,  2.75it/s]
+03/21 01:34:40 PM | Train: [94/100] Final Prec@1 93.7500%
+03/21 01:34:56 PM | Valid: [94/100] Final Prec@1 96.5233%; lambda = 0.0001
+03/21 01:34:56 PM | Quality: 0.9652333333333334
+
+
+03/21 01:35:12 PM | Valid: [94/100] Final Prec@1 96.4833%; lambda = 0.001
+03/21 01:35:12 PM | Quality: 0.9648333333651224
+
+
+03/21 01:35:29 PM | Valid: [94/100] Final Prec@1 96.1333%; lambda = 0.01
+03/21 01:35:29 PM | Quality: 0.9613333333333334
+
+
+03/21 01:35:46 PM | Valid: [94/100] Final Prec@1 88.3633%; lambda = 0.1
+03/21 01:35:46 PM | Quality: 0.8836333333969116
+
+
+03/21 01:35:46 PM | epoch94
+03/21 01:35:46 PM | using seed 94
+468it [02:52,  2.80it/s]03/21 01:38:38 PM | Train: [95/100] Step 468/468 Loss 0.208 Acc@(1) 95.8%
+469it [02:52,  2.72it/s]
+03/21 01:38:39 PM | Train: [95/100] Final Prec@1 95.8333%
+03/21 01:38:55 PM | Valid: [95/100] Final Prec@1 95.1467%; lambda = 0.0001
+03/21 01:38:55 PM | Quality: 0.9514666666984558
+
+
+03/21 01:39:10 PM | Valid: [95/100] Final Prec@1 95.0167%; lambda = 0.001
+03/21 01:39:10 PM | Quality: 0.9501666666984558
+
+
+03/21 01:39:26 PM | Valid: [95/100] Final Prec@1 94.8333%; lambda = 0.01
+03/21 01:39:26 PM | Quality: 0.9483333333969116
+
+
+03/21 01:39:42 PM | Valid: [95/100] Final Prec@1 92.0667%; lambda = 0.1
+03/21 01:39:42 PM | Quality: 0.9206666666666666
+
+
+03/21 01:39:42 PM | epoch95
+03/21 01:39:42 PM | using seed 95
+468it [02:50,  3.05it/s]03/21 01:42:34 PM | Train: [96/100] Step 468/468 Loss 0.221 Acc@(1) 93.8%
+469it [02:50,  2.75it/s]
+03/21 01:42:34 PM | Train: [96/100] Final Prec@1 93.7500%
+03/21 01:42:50 PM | Valid: [96/100] Final Prec@1 95.0367%; lambda = 0.0001
+03/21 01:42:50 PM | Quality: 0.950366666730245
+
+
+03/21 01:43:06 PM | Valid: [96/100] Final Prec@1 94.9900%; lambda = 0.001
+03/21 01:43:06 PM | Quality: 0.9499000000635783
+
+
+03/21 01:43:21 PM | Valid: [96/100] Final Prec@1 94.9600%; lambda = 0.01
+03/21 01:43:21 PM | Quality: 0.9496000000317891
+
+
+03/21 01:43:38 PM | Valid: [96/100] Final Prec@1 91.5133%; lambda = 0.1
+03/21 01:43:38 PM | Quality: 0.9151333333333334
+
+
+03/21 01:43:38 PM | epoch96
+03/21 01:43:38 PM | using seed 96
+468it [02:50,  3.12it/s]03/21 01:46:29 PM | Train: [97/100] Step 468/468 Loss 0.230 Acc@(1) 97.9%
+469it [02:50,  2.75it/s]
+03/21 01:46:29 PM | Train: [97/100] Final Prec@1 97.9167%
+03/21 01:46:45 PM | Valid: [97/100] Final Prec@1 96.1333%; lambda = 0.0001
+03/21 01:46:45 PM | Quality: 0.9613333333333334
+
+
+03/21 01:47:02 PM | Valid: [97/100] Final Prec@1 95.8933%; lambda = 0.001
+03/21 01:47:02 PM | Quality: 0.9589333333651224
+
+
+03/21 01:47:17 PM | Valid: [97/100] Final Prec@1 95.8000%; lambda = 0.01
+03/21 01:47:18 PM | Quality: 0.9580000000317891
+
+
+03/21 01:47:34 PM | Valid: [97/100] Final Prec@1 90.0967%; lambda = 0.1
+03/21 01:47:34 PM | Quality: 0.900966666730245
+
+
+03/21 01:47:34 PM | epoch97
+03/21 01:47:34 PM | using seed 97
+468it [02:51,  2.85it/s]03/21 01:50:26 PM | Train: [98/100] Step 468/468 Loss 0.232 Acc@(1) 97.9%
+469it [02:52,  2.73it/s]
+03/21 01:50:26 PM | Train: [98/100] Final Prec@1 97.9167%
+03/21 01:50:43 PM | Valid: [98/100] Final Prec@1 93.1233%; lambda = 0.0001
+03/21 01:50:43 PM | Quality: 0.9312333333333334
+
+
+03/21 01:50:59 PM | Valid: [98/100] Final Prec@1 93.1500%; lambda = 0.001
+03/21 01:50:59 PM | Quality: 0.9315
+
+
+03/21 01:51:15 PM | Valid: [98/100] Final Prec@1 92.6767%; lambda = 0.01
+03/21 01:51:15 PM | Quality: 0.926766666730245
+
+
+03/21 01:51:31 PM | Valid: [98/100] Final Prec@1 89.6900%; lambda = 0.1
+03/21 01:51:31 PM | Quality: 0.8969
+
+
+03/21 01:51:31 PM | epoch98
+03/21 01:51:31 PM | using seed 98
+468it [02:52,  3.02it/s]03/21 01:54:24 PM | Train: [99/100] Step 468/468 Loss 0.224 Acc@(1) 95.8%
+469it [02:52,  2.71it/s]
+03/21 01:54:25 PM | Train: [99/100] Final Prec@1 95.8333%
+03/21 01:54:40 PM | Valid: [99/100] Final Prec@1 96.3667%; lambda = 0.0001
+03/21 01:54:40 PM | Quality: 0.9636666666666667
+
+
+03/21 01:54:56 PM | Valid: [99/100] Final Prec@1 96.3567%; lambda = 0.001
+03/21 01:54:56 PM | Quality: 0.9635666666666667
+
+
+03/21 01:55:12 PM | Valid: [99/100] Final Prec@1 96.1233%; lambda = 0.01
+03/21 01:55:12 PM | Quality: 0.9612333333333334
+
+
+03/21 01:55:28 PM | Valid: [99/100] Final Prec@1 90.5867%; lambda = 0.1
+03/21 01:55:28 PM | Quality: 0.905866666730245
+
+
+03/21 01:55:28 PM | epoch99
+03/21 01:55:28 PM | using seed 99
+468it [02:50,  2.53it/s]03/21 01:58:19 PM | Train: [100/100] Step 468/468 Loss 0.238 Acc@(1) 95.8%
+469it [02:50,  2.74it/s]
+03/21 01:58:20 PM | Train: [100/100] Final Prec@1 95.8333%
+03/21 01:58:36 PM | Valid: [100/100] Final Prec@1 95.7533%; lambda = 0.0001
+03/21 01:58:36 PM | Quality: 0.9575333333651225
+
+
+03/21 01:58:52 PM | Valid: [100/100] Final Prec@1 95.6400%; lambda = 0.001
+03/21 01:58:52 PM | Quality: 0.9564
+
+
+03/21 01:59:08 PM | Valid: [100/100] Final Prec@1 95.3133%; lambda = 0.01
+03/21 01:59:08 PM | Quality: 0.9531333333969116
+
+
+03/21 01:59:24 PM | Valid: [100/100] Final Prec@1 90.6333%; lambda = 0.1
+03/21 01:59:24 PM | Quality: 0.9063333333333333
+
+
+03/21 01:59:24 PM | Final best =  0.9789000000317891
