@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 %\graphicspath{ {../fig/} {.}}
 %\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{multirow}
+
 
 
 \begin{document}
@@ -140,7 +142,7 @@ $$\alpha = \lambda\mathbf{b}_1 + \mathbf{b}_2$$
 
 \begin{figure}[H]
 \centering
-  \includegraphics[width=0.8\textwidth]{basic_exp.eps}
+  \includegraphics[width=0.8\textwidth]{new_basic_exp.eps}
   \caption{Зависимость точности модели от числа прошедших эпох для разынх параметров регуляризации}
   \label{fig:basic_exp}
 \end{figure}
@@ -156,7 +158,32 @@ $$\alpha = \lambda\mathbf{b}_1 + \mathbf{b}_2$$
   \label{fig:main_exp}
 \end{figure}
 
- 
+\subsection{Анализ ошибки}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ |c|c|c|c|c| }
+	\hline
+	 \multirow{2}{*}{Модель} & \multicolumn{4}{c|}{Precision, \%} \\ \cline{2-5}
+	 		& эпоха 30 & эпоха 50 & эпоха 70 & эпоха 100\\
+	 \hline
+ 	DARTS, $\lambda = 0.1$ &96.3500 & 95.4800 & 94.1200 & 90.6333  \\ 
+ 	DARTS, $\lambda = 0.01$ &95.8900 & 96.7167& 91.0633 & 95.3133 \\ 
+ 	DARTS, $\lambda = 0.001$ &95.9133 & 96.6200 & 90.6400 & 95.6400 \\ 
+ 	DARTS, $\lambda = 0.0001$ &95.9733 & 96.5367 & 90.4067 & 95.7533\\
+ 	\hline
+ 	Hypernet, $\lambda = 0.1$&86.6000 &87.3967 & 89.3433 & 89.5067 \\
+ 	Hypernet, $\lambda = 0.01$& 84.1333 & 90.6333 &91.9100 & 92.7333\\
+ 	Hypernet, $\lambda = 0.001$&97.6533 & 97.5800 & 98.0833 & 97.9467 \\
+ 	Hypernet, $\lambda = 0.0001$& \textbf{98.5800} &  \textbf{98.8867}&\textbf{98.9467}&\textbf{99.2400} \\
+ 	\hline
+\end{tabular}
+\caption{\label{tab:exp} Результаты базового и основного экспериментов. Приведены значения качества моделей на валидации.}
+\end{table}
+
+
+Из тыблицы \ref{tab:exp} видно, что для модели DARTS свойственно уменьшение качества на валидации с ростом номера эпохи. Это связано с тем, что происходит выбор более простой архитектуры, а именно, становится больше пропусков соединений. Данное свойство DARTS исследовалось в работе \cite{journals/corr/abs-1911-12126}.
+
 
 %%%% если имеется doi цитируемого источника, необходимо его указать, см. пример в \bibitem{article}
 %%%% DOI публикации, зарегистрированной в системе Crossref, можно получить по адресу http://www.crossref.org/guestquery/

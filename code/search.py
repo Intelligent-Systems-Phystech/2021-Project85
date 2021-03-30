@@ -101,28 +101,28 @@ def main():
                         
             # validation
             cur_step = (epoch+1) * len(train_loader)
-            for lam in np.array([0.0001, 0.001, 0.01, 0.1], dtype=np.float32):
-                val_qual = validate(valid_loader, model, epoch,
-                                    cur_step, device, config, logger, writer, lam=lam)
-                plot_path = os.path.join(config.plot_path, "EP{:02d}_Seed{}".format(epoch+1, seed))
-                caption = "Epoch {}".format(epoch+1)
-                #model.plot_genotype(plot_path, caption)
+            # for lam in np.array([0.0001, 0.001, 0.01, 0.1], dtype=np.float32):
+            val_qual = validate(valid_loader, model, epoch,
+                                cur_step, device, config, logger, writer)
+            plot_path = os.path.join(config.plot_path, "EP{:02d}_Seed{}".format(epoch+1, seed))
+            caption = "Epoch {}".format(epoch+1)
+            #model.plot_genotype(plot_path, caption)
 
-                if int(config.use_train_quality) != 0:
-                    cur_qual = train_qual
-                else:
-                    cur_qual = val_qual
+            if int(config.use_train_quality) != 0:
+                cur_qual = train_qual
+            else:
+                cur_qual = val_qual
 
-                # save
-                if best < cur_qual:
-                    best = cur_qual
-                    is_best = True
-                else:
-                    is_best = False
+            # save
+            if best < cur_qual:
+                best = cur_qual
+                is_best = True
+            else:
+                is_best = False
 
-                utils.save_checkpoint(model.state_dict(), config.path, seed, epoch, is_best=is_best)
-                logger.info("Quality{}: {} \n\n".format(
-                    '*' if is_best else '', cur_qual))
+            utils.save_checkpoint(model.state_dict(), config.path, seed, epoch, is_best=is_best)
+            logger.info("Quality{}: {} \n\n".format(
+                '*' if is_best else '', cur_qual))
 
         logger.info("Final best =  {}".format(best))    
 

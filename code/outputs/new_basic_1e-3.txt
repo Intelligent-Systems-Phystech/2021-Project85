@@ -1,0 +1,910 @@
+03/27 12:26:30 PM | Logger is set - training start
+/usr/local/lib/python3.7/dist-packages/torchvision/datasets/mnist.py:58: UserWarning: train_data has been renamed data
+  warnings.warn("train_data has been renamed data")
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:477: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+03/27 12:26:33 PM | epoch0
+03/27 12:26:33 PM | using seed 0
+/usr/local/lib/python3.7/dist-packages/torch/optim/lr_scheduler.py:134: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/local/lib/python3.7/dist-packages/torch/optim/lr_scheduler.py:154: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+468it [03:26,  2.42it/s]03/27 12:30:00 PM | Train: [ 1/100] Step 468/468 Loss 0.959 Acc@(1) 83.3%
+469it [03:27,  2.26it/s]
+03/27 12:30:01 PM | Train: [ 1/100] Final Prec@1 83.3333%
+03/27 12:30:17 PM | Valid: [ 1/100] Final Prec@1 85.3133%
+03/27 12:30:17 PM | Quality*: 0.8531333333333333 
+
+
+03/27 12:30:17 PM | epoch1
+03/27 12:30:17 PM | using seed 1
+468it [03:26,  2.45it/s]03/27 12:33:44 PM | Train: [ 2/100] Step 468/468 Loss -0.009 Acc@(1) 97.9%
+469it [03:26,  2.27it/s]
+03/27 12:33:44 PM | Train: [ 2/100] Final Prec@1 97.9167%
+03/27 12:34:00 PM | Valid: [ 2/100] Final Prec@1 95.7333%
+03/27 12:34:01 PM | Quality*: 0.9573333333651225 
+
+
+03/27 12:34:01 PM | epoch2
+03/27 12:34:01 PM | using seed 2
+468it [03:26,  2.44it/s]03/27 12:37:28 PM | Train: [ 3/100] Step 468/468 Loss -0.220 Acc@(1) 100.0%
+469it [03:27,  2.26it/s]
+03/27 12:37:28 PM | Train: [ 3/100] Final Prec@1 100.0000%
+03/27 12:37:44 PM | Valid: [ 3/100] Final Prec@1 95.9700%
+03/27 12:37:45 PM | Quality*: 0.9597 
+
+
+03/27 12:37:45 PM | epoch3
+03/27 12:37:45 PM | using seed 3
+468it [03:25,  2.44it/s]03/27 12:41:11 PM | Train: [ 4/100] Step 468/468 Loss -0.398 Acc@(1) 93.8%
+469it [03:25,  2.28it/s]
+03/27 12:41:11 PM | Train: [ 4/100] Final Prec@1 93.7500%
+03/27 12:41:27 PM | Valid: [ 4/100] Final Prec@1 96.8600%
+03/27 12:41:27 PM | Quality*: 0.9686 
+
+
+03/27 12:41:27 PM | epoch4
+03/27 12:41:27 PM | using seed 4
+468it [03:26,  2.43it/s]03/27 12:44:55 PM | Train: [ 5/100] Step 468/468 Loss -0.582 Acc@(1) 97.9%
+469it [03:27,  2.26it/s]
+03/27 12:44:55 PM | Train: [ 5/100] Final Prec@1 97.9167%
+03/27 12:45:11 PM | Valid: [ 5/100] Final Prec@1 97.2533%
+03/27 12:45:11 PM | Quality*: 0.9725333333969116 
+
+
+03/27 12:45:11 PM | epoch5
+03/27 12:45:11 PM | using seed 5
+468it [03:27,  2.41it/s]03/27 12:48:39 PM | Train: [ 6/100] Step 468/468 Loss -0.801 Acc@(1) 100.0%
+469it [03:27,  2.26it/s]
+03/27 12:48:39 PM | Train: [ 6/100] Final Prec@1 100.0000%
+03/27 12:48:55 PM | Valid: [ 6/100] Final Prec@1 96.7300%
+03/27 12:48:55 PM | Quality: 0.9673000000317892 
+
+
+03/27 12:48:55 PM | epoch6
+03/27 12:48:55 PM | using seed 6
+468it [03:27,  2.43it/s]03/27 12:52:23 PM | Train: [ 7/100] Step 468/468 Loss -1.058 Acc@(1) 97.9%
+469it [03:27,  2.26it/s]
+03/27 12:52:23 PM | Train: [ 7/100] Final Prec@1 97.9167%
+03/27 12:52:40 PM | Valid: [ 7/100] Final Prec@1 97.2667%
+03/27 12:52:40 PM | Quality*: 0.9726666666666667 
+
+
+03/27 12:52:40 PM | epoch7
+03/27 12:52:40 PM | using seed 7
+468it [03:27,  2.35it/s]03/27 12:56:08 PM | Train: [ 8/100] Step 468/468 Loss -1.370 Acc@(1) 100.0%
+469it [03:28,  2.25it/s]
+03/27 12:56:09 PM | Train: [ 8/100] Final Prec@1 100.0000%
+03/27 12:56:25 PM | Valid: [ 8/100] Final Prec@1 97.6400%
+03/27 12:56:25 PM | Quality*: 0.9764000000317892 
+
+
+03/27 12:56:25 PM | epoch8
+03/27 12:56:25 PM | using seed 8
+468it [03:28,  2.41it/s]03/27 12:59:55 PM | Train: [ 9/100] Step 468/468 Loss -1.751 Acc@(1) 97.9%
+469it [03:29,  2.24it/s]
+03/27 12:59:55 PM | Train: [ 9/100] Final Prec@1 97.9167%
+03/27 01:00:11 PM | Valid: [ 9/100] Final Prec@1 97.2667%
+03/27 01:00:11 PM | Quality: 0.9726666666666667 
+
+
+03/27 01:00:11 PM | epoch9
+03/27 01:00:11 PM | using seed 9
+468it [03:23,  2.46it/s]03/27 01:03:35 PM | Train: [10/100] Step 468/468 Loss -2.200 Acc@(1) 97.9%
+469it [03:23,  2.30it/s]
+03/27 01:03:35 PM | Train: [10/100] Final Prec@1 97.9167%
+03/27 01:03:51 PM | Valid: [10/100] Final Prec@1 97.5367%
+03/27 01:03:51 PM | Quality: 0.975366666730245 
+
+
+03/27 01:03:51 PM | epoch10
+03/27 01:03:51 PM | using seed 10
+468it [03:23,  2.46it/s]03/27 01:07:15 PM | Train: [11/100] Step 468/468 Loss -2.751 Acc@(1) 97.9%
+469it [03:24,  2.30it/s]
+03/27 01:07:15 PM | Train: [11/100] Final Prec@1 97.9167%
+03/27 01:07:32 PM | Valid: [11/100] Final Prec@1 97.2700%
+03/27 01:07:32 PM | Quality: 0.9727000000635783 
+
+
+03/27 01:07:32 PM | epoch11
+03/27 01:07:32 PM | using seed 11
+468it [03:25,  2.43it/s]03/27 01:10:58 PM | Train: [12/100] Step 468/468 Loss -3.401 Acc@(1) 97.9%
+469it [03:25,  2.28it/s]
+03/27 01:10:58 PM | Train: [12/100] Final Prec@1 97.9167%
+03/27 01:11:14 PM | Valid: [12/100] Final Prec@1 97.4033%
+03/27 01:11:14 PM | Quality: 0.9740333333651224 
+
+
+03/27 01:11:14 PM | epoch12
+03/27 01:11:14 PM | using seed 12
+468it [03:27,  2.38it/s]03/27 01:14:43 PM | Train: [13/100] Step 468/468 Loss -4.162 Acc@(1) 97.9%
+469it [03:28,  2.25it/s]
+03/27 01:14:43 PM | Train: [13/100] Final Prec@1 97.9167%
+03/27 01:15:00 PM | Valid: [13/100] Final Prec@1 97.9933%
+03/27 01:15:00 PM | Quality*: 0.9799333333969116 
+
+
+03/27 01:15:00 PM | epoch13
+03/27 01:15:00 PM | using seed 13
+468it [03:30,  2.32it/s]03/27 01:18:31 PM | Train: [14/100] Step 468/468 Loss -5.046 Acc@(1) 97.9%
+469it [03:30,  2.23it/s]
+03/27 01:18:31 PM | Train: [14/100] Final Prec@1 97.9167%
+03/27 01:18:48 PM | Valid: [14/100] Final Prec@1 97.7467%
+03/27 01:18:48 PM | Quality: 0.9774666666984558 
+
+
+03/27 01:18:48 PM | epoch14
+03/27 01:18:48 PM | using seed 14
+468it [03:27,  2.40it/s]03/27 01:22:17 PM | Train: [15/100] Step 468/468 Loss -6.069 Acc@(1) 100.0%
+469it [03:28,  2.25it/s]
+03/27 01:22:17 PM | Train: [15/100] Final Prec@1 100.0000%
+03/27 01:22:33 PM | Valid: [15/100] Final Prec@1 97.9000%
+03/27 01:22:33 PM | Quality: 0.9790000000635782 
+
+
+03/27 01:22:33 PM | epoch15
+03/27 01:22:33 PM | using seed 15
+468it [03:28,  2.40it/s]03/27 01:26:03 PM | Train: [16/100] Step 468/468 Loss -7.232 Acc@(1) 100.0%
+469it [03:29,  2.24it/s]
+03/27 01:26:03 PM | Train: [16/100] Final Prec@1 100.0000%
+03/27 01:26:19 PM | Valid: [16/100] Final Prec@1 98.0133%
+03/27 01:26:19 PM | Quality*: 0.9801333333969117 
+
+
+03/27 01:26:19 PM | epoch16
+03/27 01:26:19 PM | using seed 16
+468it [03:30,  2.39it/s]03/27 01:29:50 PM | Train: [17/100] Step 468/468 Loss -8.542 Acc@(1) 100.0%
+469it [03:30,  2.23it/s]
+03/27 01:29:50 PM | Train: [17/100] Final Prec@1 100.0000%
+03/27 01:30:07 PM | Valid: [17/100] Final Prec@1 97.9867%
+03/27 01:30:07 PM | Quality: 0.9798666666666667 
+
+
+03/27 01:30:07 PM | epoch17
+03/27 01:30:07 PM | using seed 17
+468it [03:28,  2.40it/s]03/27 01:33:36 PM | Train: [18/100] Step 468/468 Loss -10.007 Acc@(1) 100.0%
+469it [03:29,  2.24it/s]
+03/27 01:33:37 PM | Train: [18/100] Final Prec@1 100.0000%
+03/27 01:33:53 PM | Valid: [18/100] Final Prec@1 97.8833%
+03/27 01:33:53 PM | Quality: 0.9788333333651225 
+
+
+03/27 01:33:53 PM | epoch18
+03/27 01:33:53 PM | using seed 18
+468it [03:29,  2.39it/s]03/27 01:37:23 PM | Train: [19/100] Step 468/468 Loss -11.640 Acc@(1) 100.0%
+469it [03:29,  2.24it/s]
+03/27 01:37:23 PM | Train: [19/100] Final Prec@1 100.0000%
+03/27 01:37:40 PM | Valid: [19/100] Final Prec@1 98.1467%
+03/27 01:37:40 PM | Quality*: 0.9814666666666667 
+
+
+03/27 01:37:40 PM | epoch19
+03/27 01:37:40 PM | using seed 19
+468it [03:29,  2.36it/s]03/27 01:41:10 PM | Train: [20/100] Step 468/468 Loss -13.436 Acc@(1) 93.8%
+469it [03:29,  2.24it/s]
+03/27 01:41:10 PM | Train: [20/100] Final Prec@1 93.7500%
+03/27 01:41:26 PM | Valid: [20/100] Final Prec@1 98.0933%
+03/27 01:41:26 PM | Quality: 0.9809333333333333 
+
+
+03/27 01:41:26 PM | epoch20
+03/27 01:41:26 PM | using seed 20
+468it [03:33,  2.38it/s]03/27 01:45:01 PM | Train: [21/100] Step 468/468 Loss -15.405 Acc@(1) 100.0%
+469it [03:33,  2.19it/s]
+03/27 01:45:01 PM | Train: [21/100] Final Prec@1 100.0000%
+03/27 01:45:17 PM | Valid: [21/100] Final Prec@1 98.0733%
+03/27 01:45:17 PM | Quality: 0.9807333333333333 
+
+
+03/27 01:45:17 PM | epoch21
+03/27 01:45:17 PM | using seed 21
+468it [03:29,  2.39it/s]03/27 01:48:48 PM | Train: [22/100] Step 468/468 Loss -17.543 Acc@(1) 97.9%
+469it [03:30,  2.23it/s]
+03/27 01:48:48 PM | Train: [22/100] Final Prec@1 97.9167%
+03/27 01:49:04 PM | Valid: [22/100] Final Prec@1 97.9233%
+03/27 01:49:04 PM | Quality: 0.9792333333651225 
+
+
+03/27 01:49:04 PM | epoch22
+03/27 01:49:04 PM | using seed 22
+468it [03:25,  2.44it/s]03/27 01:52:31 PM | Train: [23/100] Step 468/468 Loss -19.864 Acc@(1) 97.9%
+469it [03:26,  2.28it/s]
+03/27 01:52:31 PM | Train: [23/100] Final Prec@1 97.9167%
+03/27 01:52:47 PM | Valid: [23/100] Final Prec@1 97.8633%
+03/27 01:52:47 PM | Quality: 0.9786333333969116 
+
+
+03/27 01:52:47 PM | epoch23
+03/27 01:52:47 PM | using seed 23
+468it [03:24,  2.44it/s]03/27 01:56:13 PM | Train: [24/100] Step 468/468 Loss -22.359 Acc@(1) 97.9%
+469it [03:25,  2.29it/s]
+03/27 01:56:13 PM | Train: [24/100] Final Prec@1 97.9167%
+03/27 01:56:29 PM | Valid: [24/100] Final Prec@1 98.1333%
+03/27 01:56:29 PM | Quality: 0.9813333333969116 
+
+
+03/27 01:56:29 PM | epoch24
+03/27 01:56:29 PM | using seed 24
+468it [03:25,  2.35it/s]03/27 01:59:56 PM | Train: [25/100] Step 468/468 Loss -25.039 Acc@(1) 97.9%
+469it [03:26,  2.27it/s]
+03/27 01:59:56 PM | Train: [25/100] Final Prec@1 97.9167%
+03/27 02:00:13 PM | Valid: [25/100] Final Prec@1 97.9900%
+03/27 02:00:13 PM | Quality: 0.9799000000635782 
+
+
+03/27 02:00:13 PM | epoch25
+03/27 02:00:13 PM | using seed 25
+468it [03:24,  2.46it/s]03/27 02:03:38 PM | Train: [26/100] Step 468/468 Loss -27.901 Acc@(1) 97.9%
+469it [03:24,  2.29it/s]
+03/27 02:03:38 PM | Train: [26/100] Final Prec@1 97.9167%
+03/27 02:03:54 PM | Valid: [26/100] Final Prec@1 98.1233%
+03/27 02:03:54 PM | Quality: 0.9812333333333333 
+
+
+03/27 02:03:54 PM | epoch26
+03/27 02:03:54 PM | using seed 26
+468it [03:25,  2.37it/s]03/27 02:07:21 PM | Train: [27/100] Step 468/468 Loss -30.941 Acc@(1) 97.9%
+469it [03:26,  2.28it/s]
+03/27 02:07:21 PM | Train: [27/100] Final Prec@1 97.9167%
+03/27 02:07:37 PM | Valid: [27/100] Final Prec@1 98.0800%
+03/27 02:07:37 PM | Quality: 0.9808000000317891 
+
+
+03/27 02:07:37 PM | epoch27
+03/27 02:07:37 PM | using seed 27
+468it [03:30,  2.38it/s]03/27 02:11:08 PM | Train: [28/100] Step 468/468 Loss -34.161 Acc@(1) 97.9%
+469it [03:30,  2.23it/s]
+03/27 02:11:08 PM | Train: [28/100] Final Prec@1 97.9167%
+03/27 02:11:25 PM | Valid: [28/100] Final Prec@1 98.1500%
+03/27 02:11:25 PM | Quality*: 0.9815000000635783 
+
+
+03/27 02:11:25 PM | epoch28
+03/27 02:11:25 PM | using seed 28
+468it [03:29,  2.38it/s]03/27 02:14:55 PM | Train: [29/100] Step 468/468 Loss -37.569 Acc@(1) 97.9%
+469it [03:29,  2.24it/s]
+03/27 02:14:55 PM | Train: [29/100] Final Prec@1 97.9167%
+03/27 02:15:12 PM | Valid: [29/100] Final Prec@1 97.7700%
+03/27 02:15:12 PM | Quality: 0.9777000000635783 
+
+
+03/27 02:15:12 PM | epoch29
+03/27 02:15:12 PM | using seed 29
+468it [03:29,  2.38it/s]03/27 02:18:42 PM | Train: [30/100] Step 468/468 Loss -41.150 Acc@(1) 97.9%
+469it [03:29,  2.23it/s]
+03/27 02:18:42 PM | Train: [30/100] Final Prec@1 97.9167%
+03/27 02:18:59 PM | Valid: [30/100] Final Prec@1 97.6533%
+03/27 02:18:59 PM | Quality: 0.9765333333969116 
+
+
+03/27 02:18:59 PM | epoch30
+03/27 02:18:59 PM | using seed 30
+468it [03:29,  2.45it/s]03/27 02:22:29 PM | Train: [31/100] Step 468/468 Loss -44.918 Acc@(1) 97.9%
+469it [03:29,  2.24it/s]
+03/27 02:22:29 PM | Train: [31/100] Final Prec@1 97.9167%
+03/27 02:22:45 PM | Valid: [31/100] Final Prec@1 97.9400%
+03/27 02:22:45 PM | Quality: 0.9794000000635783 
+
+
+03/27 02:22:45 PM | epoch31
+03/27 02:22:45 PM | using seed 31
+468it [03:23,  2.47it/s]03/27 02:26:09 PM | Train: [32/100] Step 468/468 Loss -48.863 Acc@(1) 100.0%
+469it [03:24,  2.30it/s]
+03/27 02:26:09 PM | Train: [32/100] Final Prec@1 100.0000%
+03/27 02:26:25 PM | Valid: [32/100] Final Prec@1 97.8867%
+03/27 02:26:25 PM | Quality: 0.9788666666984558 
+
+
+03/27 02:26:25 PM | epoch32
+03/27 02:26:25 PM | using seed 32
+468it [03:23,  2.43it/s]03/27 02:29:50 PM | Train: [33/100] Step 468/468 Loss -52.980 Acc@(1) 100.0%
+469it [03:24,  2.30it/s]
+03/27 02:29:50 PM | Train: [33/100] Final Prec@1 100.0000%
+03/27 02:30:06 PM | Valid: [33/100] Final Prec@1 97.7100%
+03/27 02:30:06 PM | Quality: 0.9771000000635783 
+
+
+03/27 02:30:06 PM | epoch33
+03/27 02:30:06 PM | using seed 33
+468it [03:24,  2.46it/s]03/27 02:33:32 PM | Train: [34/100] Step 468/468 Loss -57.274 Acc@(1) 100.0%
+469it [03:24,  2.29it/s]
+03/27 02:33:32 PM | Train: [34/100] Final Prec@1 100.0000%
+03/27 02:33:48 PM | Valid: [34/100] Final Prec@1 97.7267%
+03/27 02:33:48 PM | Quality: 0.9772666666666666 
+
+
+03/27 02:33:48 PM | epoch34
+03/27 02:33:48 PM | using seed 34
+468it [03:24,  2.43it/s]03/27 02:37:14 PM | Train: [35/100] Step 468/468 Loss -61.741 Acc@(1) 100.0%
+469it [03:25,  2.29it/s]
+03/27 02:37:14 PM | Train: [35/100] Final Prec@1 100.0000%
+03/27 02:37:30 PM | Valid: [35/100] Final Prec@1 97.8067%
+03/27 02:37:30 PM | Quality: 0.9780666666984558 
+
+
+03/27 02:37:30 PM | epoch35
+03/27 02:37:30 PM | using seed 35
+468it [03:25,  2.42it/s]03/27 02:40:56 PM | Train: [36/100] Step 468/468 Loss -66.373 Acc@(1) 100.0%
+469it [03:26,  2.28it/s]
+03/27 02:40:57 PM | Train: [36/100] Final Prec@1 100.0000%
+03/27 02:41:13 PM | Valid: [36/100] Final Prec@1 97.7733%
+03/27 02:41:13 PM | Quality: 0.9777333333651225 
+
+
+03/27 02:41:13 PM | epoch36
+03/27 02:41:13 PM | using seed 36
+468it [03:25,  2.45it/s]03/27 02:44:39 PM | Train: [37/100] Step 468/468 Loss -71.177 Acc@(1) 100.0%
+469it [03:25,  2.28it/s]
+03/27 02:44:39 PM | Train: [37/100] Final Prec@1 100.0000%
+03/27 02:44:56 PM | Valid: [37/100] Final Prec@1 97.9767%
+03/27 02:44:56 PM | Quality: 0.9797666667302449 
+
+
+03/27 02:44:56 PM | epoch37
+03/27 02:44:56 PM | using seed 37
+468it [03:26,  2.39it/s]03/27 02:48:23 PM | Train: [38/100] Step 468/468 Loss -76.148 Acc@(1) 95.8%
+469it [03:27,  2.27it/s]
+03/27 02:48:23 PM | Train: [38/100] Final Prec@1 95.8333%
+03/27 02:48:39 PM | Valid: [38/100] Final Prec@1 97.6533%
+03/27 02:48:39 PM | Quality: 0.9765333333969116 
+
+
+03/27 02:48:39 PM | epoch38
+03/27 02:48:39 PM | using seed 38
+468it [03:28,  2.39it/s]03/27 02:52:09 PM | Train: [39/100] Step 468/468 Loss -81.272 Acc@(1) 100.0%
+469it [03:29,  2.24it/s]
+03/27 02:52:09 PM | Train: [39/100] Final Prec@1 100.0000%
+03/27 02:52:26 PM | Valid: [39/100] Final Prec@1 97.4000%
+03/27 02:52:26 PM | Quality: 0.974 
+
+
+03/27 02:52:26 PM | epoch39
+03/27 02:52:26 PM | using seed 39
+468it [03:29,  2.39it/s]03/27 02:55:56 PM | Train: [40/100] Step 468/468 Loss -86.553 Acc@(1) 97.9%
+469it [03:30,  2.23it/s]
+03/27 02:55:57 PM | Train: [40/100] Final Prec@1 97.9167%
+03/27 02:56:13 PM | Valid: [40/100] Final Prec@1 97.2233%
+03/27 02:56:13 PM | Quality: 0.9722333333333333 
+
+
+03/27 02:56:13 PM | epoch40
+03/27 02:56:13 PM | using seed 40
+468it [03:28,  2.38it/s]03/27 02:59:43 PM | Train: [41/100] Step 468/468 Loss -91.989 Acc@(1) 97.9%
+469it [03:29,  2.24it/s]
+03/27 02:59:43 PM | Train: [41/100] Final Prec@1 97.9167%
+03/27 02:59:59 PM | Valid: [41/100] Final Prec@1 97.4167%
+03/27 02:59:59 PM | Quality: 0.9741666666984559 
+
+
+03/27 02:59:59 PM | epoch41
+03/27 02:59:59 PM | using seed 41
+468it [03:28,  2.41it/s]03/27 03:03:29 PM | Train: [42/100] Step 468/468 Loss -97.571 Acc@(1) 100.0%
+469it [03:29,  2.24it/s]
+03/27 03:03:29 PM | Train: [42/100] Final Prec@1 100.0000%
+03/27 03:03:46 PM | Valid: [42/100] Final Prec@1 98.0533%
+03/27 03:03:46 PM | Quality: 0.9805333333651225 
+
+
+03/27 03:03:46 PM | epoch42
+03/27 03:03:46 PM | using seed 42
+468it [03:32,  2.32it/s]03/27 03:07:19 PM | Train: [43/100] Step 468/468 Loss -103.291 Acc@(1) 95.8%
+469it [03:33,  2.20it/s]
+03/27 03:07:19 PM | Train: [43/100] Final Prec@1 95.8333%
+03/27 03:07:36 PM | Valid: [43/100] Final Prec@1 98.1533%
+03/27 03:07:36 PM | Quality*: 0.9815333333333334 
+
+
+03/27 03:07:36 PM | epoch43
+03/27 03:07:36 PM | using seed 43
+468it [03:33,  2.42it/s]03/27 03:11:11 PM | Train: [44/100] Step 468/468 Loss -109.153 Acc@(1) 100.0%
+469it [03:34,  2.19it/s]
+03/27 03:11:11 PM | Train: [44/100] Final Prec@1 100.0000%
+03/27 03:11:27 PM | Valid: [44/100] Final Prec@1 98.0967%
+03/27 03:11:27 PM | Quality: 0.9809666666666667 
+
+
+03/27 03:11:27 PM | epoch44
+03/27 03:11:27 PM | using seed 44
+468it [03:23,  2.51it/s]03/27 03:14:52 PM | Train: [45/100] Step 468/468 Loss -115.147 Acc@(1) 95.8%
+469it [03:24,  2.30it/s]
+03/27 03:14:52 PM | Train: [45/100] Final Prec@1 95.8333%
+03/27 03:15:07 PM | Valid: [45/100] Final Prec@1 97.4200%
+03/27 03:15:07 PM | Quality: 0.9742 
+
+
+03/27 03:15:07 PM | epoch45
+03/27 03:15:07 PM | using seed 45
+468it [03:26,  2.41it/s]03/27 03:18:34 PM | Train: [46/100] Step 468/468 Loss -121.268 Acc@(1) 100.0%
+469it [03:26,  2.27it/s]
+03/27 03:18:35 PM | Train: [46/100] Final Prec@1 100.0000%
+03/27 03:18:50 PM | Valid: [46/100] Final Prec@1 97.8933%
+03/27 03:18:50 PM | Quality: 0.9789333333333333 
+
+
+03/27 03:18:50 PM | epoch46
+03/27 03:18:50 PM | using seed 46
+468it [03:24,  2.44it/s]03/27 03:22:16 PM | Train: [47/100] Step 468/468 Loss -127.513 Acc@(1) 97.9%
+469it [03:25,  2.29it/s]
+03/27 03:22:16 PM | Train: [47/100] Final Prec@1 97.9167%
+03/27 03:22:31 PM | Valid: [47/100] Final Prec@1 97.7767%
+03/27 03:22:32 PM | Quality: 0.9777666666666667 
+
+
+03/27 03:22:32 PM | epoch47
+03/27 03:22:32 PM | using seed 47
+468it [03:23,  2.45it/s]03/27 03:25:56 PM | Train: [48/100] Step 468/468 Loss -133.880 Acc@(1) 100.0%
+469it [03:23,  2.30it/s]
+03/27 03:25:56 PM | Train: [48/100] Final Prec@1 100.0000%
+03/27 03:26:12 PM | Valid: [48/100] Final Prec@1 97.6967%
+03/27 03:26:12 PM | Quality: 0.9769666666666666 
+
+
+03/27 03:26:12 PM | epoch48
+03/27 03:26:12 PM | using seed 48
+468it [03:25,  2.45it/s]03/27 03:29:38 PM | Train: [49/100] Step 468/468 Loss -140.358 Acc@(1) 100.0%
+469it [03:25,  2.28it/s]
+03/27 03:29:38 PM | Train: [49/100] Final Prec@1 100.0000%
+03/27 03:29:53 PM | Valid: [49/100] Final Prec@1 97.0700%
+03/27 03:29:53 PM | Quality: 0.9707 
+
+
+03/27 03:29:53 PM | epoch49
+03/27 03:29:53 PM | using seed 49
+468it [03:20,  2.50it/s]03/27 03:33:15 PM | Train: [50/100] Step 468/468 Loss -146.945 Acc@(1) 95.8%
+469it [03:21,  2.33it/s]
+03/27 03:33:15 PM | Train: [50/100] Final Prec@1 95.8333%
+03/27 03:33:31 PM | Valid: [50/100] Final Prec@1 97.5800%
+03/27 03:33:31 PM | Quality: 0.9758 
+
+
+03/27 03:33:31 PM | epoch50
+03/27 03:33:31 PM | using seed 50
+468it [03:21,  2.46it/s]03/27 03:36:53 PM | Train: [51/100] Step 468/468 Loss -153.636 Acc@(1) 97.9%
+469it [03:21,  2.33it/s]
+03/27 03:36:53 PM | Train: [51/100] Final Prec@1 97.9167%
+03/27 03:37:08 PM | Valid: [51/100] Final Prec@1 98.1000%
+03/27 03:37:08 PM | Quality: 0.9810000000635782 
+
+
+03/27 03:37:08 PM | epoch51
+03/27 03:37:08 PM | using seed 51
+468it [03:20,  2.48it/s]03/27 03:40:30 PM | Train: [52/100] Step 468/468 Loss -160.420 Acc@(1) 100.0%
+469it [03:21,  2.33it/s]
+03/27 03:40:30 PM | Train: [52/100] Final Prec@1 100.0000%
+03/27 03:40:46 PM | Valid: [52/100] Final Prec@1 98.0267%
+03/27 03:40:46 PM | Quality: 0.9802666666666666 
+
+
+03/27 03:40:46 PM | epoch52
+03/27 03:40:46 PM | using seed 52
+468it [03:20,  2.51it/s]03/27 03:44:07 PM | Train: [53/100] Step 468/468 Loss -167.299 Acc@(1) 97.9%
+469it [03:20,  2.34it/s]
+03/27 03:44:07 PM | Train: [53/100] Final Prec@1 97.9167%
+03/27 03:44:22 PM | Valid: [53/100] Final Prec@1 97.9467%
+03/27 03:44:22 PM | Quality: 0.9794666666984558 
+
+
+03/27 03:44:22 PM | epoch53
+03/27 03:44:22 PM | using seed 53
+468it [03:19,  2.50it/s]03/27 03:47:43 PM | Train: [54/100] Step 468/468 Loss -174.258 Acc@(1) 95.8%
+469it [03:20,  2.34it/s]
+03/27 03:47:43 PM | Train: [54/100] Final Prec@1 95.8333%
+03/27 03:47:59 PM | Valid: [54/100] Final Prec@1 98.0500%
+03/27 03:47:59 PM | Quality: 0.9805000000317892 
+
+
+03/27 03:47:59 PM | epoch54
+03/27 03:47:59 PM | using seed 54
+468it [03:22,  2.45it/s]03/27 03:51:23 PM | Train: [55/100] Step 468/468 Loss -181.298 Acc@(1) 97.9%
+469it [03:23,  2.31it/s]
+03/27 03:51:23 PM | Train: [55/100] Final Prec@1 97.9167%
+03/27 03:51:39 PM | Valid: [55/100] Final Prec@1 98.0900%
+03/27 03:51:39 PM | Quality: 0.9809000000317891 
+
+
+03/27 03:51:39 PM | epoch55
+03/27 03:51:39 PM | using seed 55
+468it [03:23,  2.48it/s]03/27 03:55:04 PM | Train: [56/100] Step 468/468 Loss -188.409 Acc@(1) 100.0%
+469it [03:24,  2.30it/s]
+03/27 03:55:04 PM | Train: [56/100] Final Prec@1 100.0000%
+03/27 03:55:20 PM | Valid: [56/100] Final Prec@1 97.8567%
+03/27 03:55:20 PM | Quality: 0.9785666666666667 
+
+
+03/27 03:55:20 PM | epoch56
+03/27 03:55:20 PM | using seed 56
+468it [03:22,  2.49it/s]03/27 03:58:44 PM | Train: [57/100] Step 468/468 Loss -195.584 Acc@(1) 100.0%
+469it [03:23,  2.31it/s]
+03/27 03:58:44 PM | Train: [57/100] Final Prec@1 100.0000%
+03/27 03:59:00 PM | Valid: [57/100] Final Prec@1 97.9867%
+03/27 03:59:00 PM | Quality: 0.9798666666666667 
+
+
+03/27 03:59:00 PM | epoch57
+03/27 03:59:00 PM | using seed 57
+468it [03:21,  2.49it/s]03/27 04:02:22 PM | Train: [58/100] Step 468/468 Loss -202.821 Acc@(1) 93.8%
+469it [03:22,  2.32it/s]
+03/27 04:02:23 PM | Train: [58/100] Final Prec@1 93.7500%
+03/27 04:02:38 PM | Valid: [58/100] Final Prec@1 98.1267%
+03/27 04:02:39 PM | Quality: 0.9812666666984559 
+
+
+03/27 04:02:39 PM | epoch58
+03/27 04:02:39 PM | using seed 58
+468it [03:21,  2.47it/s]03/27 04:06:01 PM | Train: [59/100] Step 468/468 Loss -210.110 Acc@(1) 93.8%
+469it [03:21,  2.32it/s]
+03/27 04:06:01 PM | Train: [59/100] Final Prec@1 93.7500%
+03/27 04:06:17 PM | Valid: [59/100] Final Prec@1 98.0833%
+03/27 04:06:17 PM | Quality: 0.9808333333333333 
+
+
+03/27 04:06:17 PM | epoch59
+03/27 04:06:17 PM | using seed 59
+468it [03:20,  2.46it/s]03/27 04:09:38 PM | Train: [60/100] Step 468/468 Loss -217.441 Acc@(1) 95.8%
+469it [03:20,  2.34it/s]
+03/27 04:09:38 PM | Train: [60/100] Final Prec@1 95.8333%
+03/27 04:09:53 PM | Valid: [60/100] Final Prec@1 97.6733%
+03/27 04:09:53 PM | Quality: 0.9767333333651225 
+
+
+03/27 04:09:53 PM | epoch60
+03/27 04:09:53 PM | using seed 60
+468it [03:19,  2.51it/s]03/27 04:13:13 PM | Train: [61/100] Step 468/468 Loss -224.813 Acc@(1) 97.9%
+469it [03:19,  2.35it/s]
+03/27 04:13:14 PM | Train: [61/100] Final Prec@1 97.9167%
+03/27 04:13:29 PM | Valid: [61/100] Final Prec@1 97.6733%
+03/27 04:13:29 PM | Quality: 0.9767333333969116 
+
+
+03/27 04:13:29 PM | epoch61
+03/27 04:13:29 PM | using seed 61
+468it [03:20,  2.46it/s]03/27 04:16:50 PM | Train: [62/100] Step 468/468 Loss -232.225 Acc@(1) 100.0%
+469it [03:20,  2.34it/s]
+03/27 04:16:50 PM | Train: [62/100] Final Prec@1 100.0000%
+03/27 04:17:06 PM | Valid: [62/100] Final Prec@1 97.9433%
+03/27 04:17:06 PM | Quality: 0.9794333333651225 
+
+
+03/27 04:17:06 PM | epoch62
+03/27 04:17:06 PM | using seed 62
+468it [03:22,  2.47it/s]03/27 04:20:29 PM | Train: [63/100] Step 468/468 Loss -239.657 Acc@(1) 97.9%
+469it [03:22,  2.31it/s]
+03/27 04:20:29 PM | Train: [63/100] Final Prec@1 97.9167%
+03/27 04:20:45 PM | Valid: [63/100] Final Prec@1 97.5533%
+03/27 04:20:45 PM | Quality: 0.9755333333969116 
+
+
+03/27 04:20:45 PM | epoch63
+03/27 04:20:45 PM | using seed 63
+468it [03:23,  2.46it/s]03/27 04:24:10 PM | Train: [64/100] Step 468/468 Loss -247.117 Acc@(1) 95.8%
+469it [03:23,  2.30it/s]
+03/27 04:24:10 PM | Train: [64/100] Final Prec@1 95.8333%
+03/27 04:24:26 PM | Valid: [64/100] Final Prec@1 97.4967%
+03/27 04:24:26 PM | Quality: 0.9749666666984558 
+
+
+03/27 04:24:26 PM | epoch64
+03/27 04:24:26 PM | using seed 64
+468it [03:24,  2.43it/s]03/27 04:27:51 PM | Train: [65/100] Step 468/468 Loss -254.581 Acc@(1) 100.0%
+469it [03:24,  2.29it/s]
+03/27 04:27:51 PM | Train: [65/100] Final Prec@1 100.0000%
+03/27 04:28:07 PM | Valid: [65/100] Final Prec@1 98.1367%
+03/27 04:28:07 PM | Quality: 0.9813666666666667 
+
+
+03/27 04:28:07 PM | epoch65
+03/27 04:28:07 PM | using seed 65
+468it [03:24,  2.45it/s]03/27 04:31:32 PM | Train: [66/100] Step 468/468 Loss -262.057 Acc@(1) 97.9%
+469it [03:24,  2.29it/s]
+03/27 04:31:33 PM | Train: [66/100] Final Prec@1 97.9167%
+03/27 04:31:49 PM | Valid: [66/100] Final Prec@1 97.9233%
+03/27 04:31:49 PM | Quality: 0.9792333333651225 
+
+
+03/27 04:31:49 PM | epoch66
+03/27 04:31:49 PM | using seed 66
+468it [03:23,  2.47it/s]03/27 04:35:14 PM | Train: [67/100] Step 468/468 Loss -269.537 Acc@(1) 89.6%
+469it [03:24,  2.29it/s]
+03/27 04:35:14 PM | Train: [67/100] Final Prec@1 89.5833%
+03/27 04:35:30 PM | Valid: [67/100] Final Prec@1 97.8700%
+03/27 04:35:30 PM | Quality: 0.9787000000317891 
+
+
+03/27 04:35:30 PM | epoch67
+03/27 04:35:30 PM | using seed 67
+468it [03:23,  2.47it/s]03/27 04:38:54 PM | Train: [68/100] Step 468/468 Loss -277.008 Acc@(1) 95.8%
+469it [03:23,  2.30it/s]
+03/27 04:38:54 PM | Train: [68/100] Final Prec@1 95.8333%
+03/27 04:39:10 PM | Valid: [68/100] Final Prec@1 97.7933%
+03/27 04:39:10 PM | Quality: 0.9779333333969116 
+
+
+03/27 04:39:10 PM | epoch68
+03/27 04:39:10 PM | using seed 68
+468it [03:23,  2.42it/s]03/27 04:42:35 PM | Train: [69/100] Step 468/468 Loss -284.470 Acc@(1) 97.9%
+469it [03:23,  2.30it/s]
+03/27 04:42:35 PM | Train: [69/100] Final Prec@1 97.9167%
+03/27 04:42:51 PM | Valid: [69/100] Final Prec@1 97.9033%
+03/27 04:42:51 PM | Quality: 0.9790333333333333 
+
+
+03/27 04:42:51 PM | epoch69
+03/27 04:42:51 PM | using seed 69
+468it [03:32,  2.35it/s]03/27 04:46:24 PM | Train: [70/100] Step 468/468 Loss -291.916 Acc@(1) 97.9%
+469it [03:32,  2.20it/s]
+03/27 04:46:25 PM | Train: [70/100] Final Prec@1 97.9167%
+03/27 04:46:41 PM | Valid: [70/100] Final Prec@1 98.0833%
+03/27 04:46:41 PM | Quality: 0.9808333333333333 
+
+
+03/27 04:46:41 PM | epoch70
+03/27 04:46:41 PM | using seed 70
+468it [03:24,  2.46it/s]03/27 04:50:07 PM | Train: [71/100] Step 468/468 Loss -299.334 Acc@(1) 97.9%
+469it [03:25,  2.28it/s]
+03/27 04:50:07 PM | Train: [71/100] Final Prec@1 97.9167%
+03/27 04:50:22 PM | Valid: [71/100] Final Prec@1 97.9300%
+03/27 04:50:22 PM | Quality: 0.9793000000635783 
+
+
+03/27 04:50:22 PM | epoch71
+03/27 04:50:22 PM | using seed 71
+468it [03:20,  2.52it/s]03/27 04:53:44 PM | Train: [72/100] Step 468/468 Loss -306.726 Acc@(1) 93.8%
+469it [03:21,  2.33it/s]
+03/27 04:53:44 PM | Train: [72/100] Final Prec@1 93.7500%
+03/27 04:54:00 PM | Valid: [72/100] Final Prec@1 98.0033%
+03/27 04:54:00 PM | Quality: 0.9800333333969116 
+
+
+03/27 04:54:00 PM | epoch72
+03/27 04:54:00 PM | using seed 72
+468it [03:21,  2.50it/s]03/27 04:57:22 PM | Train: [73/100] Step 468/468 Loss -314.089 Acc@(1) 97.9%
+469it [03:21,  2.32it/s]
+03/27 04:57:22 PM | Train: [73/100] Final Prec@1 97.9167%
+03/27 04:57:37 PM | Valid: [73/100] Final Prec@1 98.2133%
+03/27 04:57:37 PM | Quality*: 0.9821333333651224 
+
+
+03/27 04:57:37 PM | epoch73
+03/27 04:57:37 PM | using seed 73
+468it [03:20,  2.47it/s]03/27 05:00:58 PM | Train: [74/100] Step 468/468 Loss -321.409 Acc@(1) 100.0%
+469it [03:20,  2.34it/s]
+03/27 05:00:59 PM | Train: [74/100] Final Prec@1 100.0000%
+03/27 05:01:14 PM | Valid: [74/100] Final Prec@1 97.8900%
+03/27 05:01:14 PM | Quality: 0.9789000000635782 
+
+
+03/27 05:01:14 PM | epoch74
+03/27 05:01:14 PM | using seed 74
+468it [03:21,  2.50it/s]03/27 05:04:37 PM | Train: [75/100] Step 468/468 Loss -328.681 Acc@(1) 100.0%
+469it [03:22,  2.32it/s]
+03/27 05:04:37 PM | Train: [75/100] Final Prec@1 100.0000%
+03/27 05:04:53 PM | Valid: [75/100] Final Prec@1 98.1533%
+03/27 05:04:53 PM | Quality: 0.9815333333333334 
+
+
+03/27 05:04:53 PM | epoch75
+03/27 05:04:53 PM | using seed 75
+468it [03:21,  2.47it/s]03/27 05:08:15 PM | Train: [76/100] Step 468/468 Loss -335.909 Acc@(1) 100.0%
+469it [03:21,  2.33it/s]
+03/27 05:08:15 PM | Train: [76/100] Final Prec@1 100.0000%
+03/27 05:08:31 PM | Valid: [76/100] Final Prec@1 98.2033%
+03/27 05:08:31 PM | Quality: 0.9820333333333333 
+
+
+03/27 05:08:31 PM | epoch76
+03/27 05:08:31 PM | using seed 76
+468it [03:19,  2.50it/s]03/27 05:11:51 PM | Train: [77/100] Step 468/468 Loss -343.081 Acc@(1) 100.0%
+469it [03:20,  2.34it/s]
+03/27 05:11:51 PM | Train: [77/100] Final Prec@1 100.0000%
+03/27 05:12:07 PM | Valid: [77/100] Final Prec@1 98.0000%
+03/27 05:12:07 PM | Quality: 0.98 
+
+
+03/27 05:12:07 PM | epoch77
+03/27 05:12:07 PM | using seed 77
+468it [03:20,  2.44it/s]03/27 05:15:28 PM | Train: [78/100] Step 468/468 Loss -350.191 Acc@(1) 97.9%
+469it [03:21,  2.33it/s]
+03/27 05:15:29 PM | Train: [78/100] Final Prec@1 97.9167%
+03/27 05:15:44 PM | Valid: [78/100] Final Prec@1 98.0200%
+03/27 05:15:44 PM | Quality: 0.9802000000317892 
+
+
+03/27 05:15:44 PM | epoch78
+03/27 05:15:44 PM | using seed 78
+468it [03:22,  2.43it/s]03/27 05:19:08 PM | Train: [79/100] Step 468/468 Loss -357.239 Acc@(1) 100.0%
+469it [03:23,  2.31it/s]
+03/27 05:19:08 PM | Train: [79/100] Final Prec@1 100.0000%
+03/27 05:19:23 PM | Valid: [79/100] Final Prec@1 97.9767%
+03/27 05:19:23 PM | Quality: 0.9797666666984558 
+
+
+03/27 05:19:23 PM | epoch79
+03/27 05:19:23 PM | using seed 79
+468it [03:22,  2.49it/s]03/27 05:22:47 PM | Train: [80/100] Step 468/468 Loss -364.230 Acc@(1) 97.9%
+469it [03:22,  2.31it/s]
+03/27 05:22:47 PM | Train: [80/100] Final Prec@1 97.9167%
+03/27 05:23:02 PM | Valid: [80/100] Final Prec@1 97.9033%
+03/27 05:23:02 PM | Quality: 0.9790333333651224 
+
+
+03/27 05:23:02 PM | epoch80
+03/27 05:23:02 PM | using seed 80
+468it [03:21,  2.47it/s]03/27 05:26:25 PM | Train: [81/100] Step 468/468 Loss -371.155 Acc@(1) 97.9%
+469it [03:21,  2.32it/s]
+03/27 05:26:25 PM | Train: [81/100] Final Prec@1 97.9167%
+03/27 05:26:40 PM | Valid: [81/100] Final Prec@1 98.1400%
+03/27 05:26:40 PM | Quality: 0.9814 
+
+
+03/27 05:26:40 PM | epoch81
+03/27 05:26:40 PM | using seed 81
+468it [03:20,  2.47it/s]03/27 05:30:02 PM | Train: [82/100] Step 468/468 Loss -378.000 Acc@(1) 97.9%
+469it [03:21,  2.33it/s]
+03/27 05:30:02 PM | Train: [82/100] Final Prec@1 97.9167%
+03/27 05:30:18 PM | Valid: [82/100] Final Prec@1 97.9000%
+03/27 05:30:18 PM | Quality: 0.9790000000317891 
+
+
+03/27 05:30:18 PM | epoch82
+03/27 05:30:18 PM | using seed 82
+468it [03:20,  2.48it/s]03/27 05:33:39 PM | Train: [83/100] Step 468/468 Loss -384.779 Acc@(1) 97.9%
+469it [03:20,  2.33it/s]
+03/27 05:33:39 PM | Train: [83/100] Final Prec@1 97.9167%
+03/27 05:33:55 PM | Valid: [83/100] Final Prec@1 98.0233%
+03/27 05:33:55 PM | Quality: 0.9802333333333333 
+
+
+03/27 05:33:55 PM | epoch83
+03/27 05:33:55 PM | using seed 83
+468it [03:22,  2.48it/s]03/27 05:37:18 PM | Train: [84/100] Step 468/468 Loss -391.483 Acc@(1) 100.0%
+469it [03:22,  2.31it/s]
+03/27 05:37:18 PM | Train: [84/100] Final Prec@1 100.0000%
+03/27 05:37:34 PM | Valid: [84/100] Final Prec@1 97.7400%
+03/27 05:37:34 PM | Quality: 0.9774000000635783 
+
+
+03/27 05:37:34 PM | epoch84
+03/27 05:37:34 PM | using seed 84
+468it [03:23,  2.41it/s]03/27 05:40:58 PM | Train: [85/100] Step 468/468 Loss -398.118 Acc@(1) 97.9%
+469it [03:23,  2.30it/s]
+03/27 05:40:58 PM | Train: [85/100] Final Prec@1 97.9167%
+03/27 05:41:15 PM | Valid: [85/100] Final Prec@1 97.8333%
+03/27 05:41:15 PM | Quality: 0.9783333333651225 
+
+
+03/27 05:41:15 PM | epoch85
+03/27 05:41:15 PM | using seed 85
+468it [03:23,  2.43it/s]03/27 05:44:40 PM | Train: [86/100] Step 468/468 Loss -404.671 Acc@(1) 97.9%
+469it [03:24,  2.30it/s]
+03/27 05:44:40 PM | Train: [86/100] Final Prec@1 97.9167%
+03/27 05:44:56 PM | Valid: [86/100] Final Prec@1 98.1967%
+03/27 05:44:56 PM | Quality: 0.9819666666984558 
+
+
+03/27 05:44:56 PM | epoch86
+03/27 05:44:56 PM | using seed 86
+468it [03:23,  2.47it/s]03/27 05:48:20 PM | Train: [87/100] Step 468/468 Loss -411.150 Acc@(1) 100.0%
+469it [03:24,  2.30it/s]
+03/27 05:48:20 PM | Train: [87/100] Final Prec@1 100.0000%
+03/27 05:48:37 PM | Valid: [87/100] Final Prec@1 98.0667%
+03/27 05:48:37 PM | Quality: 0.9806666666666667 
+
+
+03/27 05:48:37 PM | epoch87
+03/27 05:48:37 PM | using seed 87
+468it [03:23,  2.48it/s]03/27 05:52:01 PM | Train: [88/100] Step 468/468 Loss -417.561 Acc@(1) 100.0%
+469it [03:24,  2.29it/s]
+03/27 05:52:02 PM | Train: [88/100] Final Prec@1 100.0000%
+03/27 05:52:18 PM | Valid: [88/100] Final Prec@1 97.9200%
+03/27 05:52:18 PM | Quality: 0.9792 
+
+
+03/27 05:52:18 PM | epoch88
+03/27 05:52:18 PM | using seed 88
+468it [03:21,  2.50it/s]03/27 05:55:40 PM | Train: [89/100] Step 468/468 Loss -423.904 Acc@(1) 95.8%
+469it [03:22,  2.32it/s]
+03/27 05:55:40 PM | Train: [89/100] Final Prec@1 95.8333%
+03/27 05:55:56 PM | Valid: [89/100] Final Prec@1 97.9433%
+03/27 05:55:56 PM | Quality: 0.9794333333651225 
+
+
+03/27 05:55:56 PM | epoch89
+03/27 05:55:56 PM | using seed 89
+468it [03:28,  2.44it/s]03/27 05:59:25 PM | Train: [90/100] Step 468/468 Loss -430.179 Acc@(1) 100.0%
+469it [03:28,  2.25it/s]
+03/27 05:59:25 PM | Train: [90/100] Final Prec@1 100.0000%
+03/27 05:59:41 PM | Valid: [90/100] Final Prec@1 97.9833%
+03/27 05:59:41 PM | Quality: 0.9798333333333333 
+
+
+03/27 05:59:41 PM | epoch90
+03/27 05:59:41 PM | using seed 90
+468it [03:23,  2.46it/s]03/27 06:03:06 PM | Train: [91/100] Step 468/468 Loss -436.384 Acc@(1) 100.0%
+469it [03:24,  2.30it/s]
+03/27 06:03:06 PM | Train: [91/100] Final Prec@1 100.0000%
+03/27 06:03:22 PM | Valid: [91/100] Final Prec@1 98.1233%
+03/27 06:03:22 PM | Quality: 0.9812333333333333 
+
+
+03/27 06:03:22 PM | epoch91
+03/27 06:03:22 PM | using seed 91
+468it [03:21,  2.48it/s]03/27 06:06:44 PM | Train: [92/100] Step 468/468 Loss -442.532 Acc@(1) 100.0%
+469it [03:22,  2.32it/s]
+03/27 06:06:45 PM | Train: [92/100] Final Prec@1 100.0000%
+03/27 06:07:00 PM | Valid: [92/100] Final Prec@1 98.1900%
+03/27 06:07:00 PM | Quality: 0.9819000000635782 
+
+
+03/27 06:07:00 PM | epoch92
+03/27 06:07:00 PM | using seed 92
+468it [03:23,  2.43it/s]03/27 06:10:24 PM | Train: [93/100] Step 468/468 Loss -448.626 Acc@(1) 100.0%
+469it [03:23,  2.30it/s]
+03/27 06:10:25 PM | Train: [93/100] Final Prec@1 100.0000%
+03/27 06:10:40 PM | Valid: [93/100] Final Prec@1 98.1667%
+03/27 06:10:40 PM | Quality: 0.9816666666984558 
+
+
+03/27 06:10:40 PM | epoch93
+03/27 06:10:40 PM | using seed 93
+468it [03:21,  2.46it/s]03/27 06:14:03 PM | Train: [94/100] Step 468/468 Loss -454.675 Acc@(1) 97.9%
+469it [03:22,  2.32it/s]
+03/27 06:14:03 PM | Train: [94/100] Final Prec@1 97.9167%
+03/27 06:14:19 PM | Valid: [94/100] Final Prec@1 97.9433%
+03/27 06:14:19 PM | Quality: 0.9794333333651225 
+
+
+03/27 06:14:19 PM | epoch94
+03/27 06:14:19 PM | using seed 94
+468it [03:21,  2.50it/s]03/27 06:17:42 PM | Train: [95/100] Step 468/468 Loss -460.681 Acc@(1) 100.0%
+469it [03:22,  2.32it/s]
+03/27 06:17:42 PM | Train: [95/100] Final Prec@1 100.0000%
+03/27 06:17:57 PM | Valid: [95/100] Final Prec@1 98.1067%
+03/27 06:17:57 PM | Quality: 0.9810666666984558 
+
+
+03/27 06:17:57 PM | epoch95
+03/27 06:17:57 PM | using seed 95
+468it [03:21,  2.46it/s]03/27 06:21:19 PM | Train: [96/100] Step 468/468 Loss -466.656 Acc@(1) 95.8%
+469it [03:21,  2.33it/s]
+03/27 06:21:19 PM | Train: [96/100] Final Prec@1 95.8333%
+03/27 06:21:35 PM | Valid: [96/100] Final Prec@1 97.9667%
+03/27 06:21:35 PM | Quality: 0.9796666666984558 
+
+
+03/27 06:21:35 PM | epoch96
+03/27 06:21:35 PM | using seed 96
+468it [03:21,  2.48it/s]03/27 06:24:57 PM | Train: [97/100] Step 468/468 Loss -472.606 Acc@(1) 100.0%
+469it [03:21,  2.32it/s]
+03/27 06:24:57 PM | Train: [97/100] Final Prec@1 100.0000%
+03/27 06:25:13 PM | Valid: [97/100] Final Prec@1 97.9233%
+03/27 06:25:13 PM | Quality: 0.9792333333333333 
+
+
+03/27 06:25:13 PM | epoch97
+03/27 06:25:13 PM | using seed 97
+468it [03:22,  2.48it/s]03/27 06:28:36 PM | Train: [98/100] Step 468/468 Loss -478.549 Acc@(1) 100.0%
+469it [03:22,  2.31it/s]
+03/27 06:28:36 PM | Train: [98/100] Final Prec@1 100.0000%
+03/27 06:28:52 PM | Valid: [98/100] Final Prec@1 98.2933%
+03/27 06:28:52 PM | Quality*: 0.9829333333969116 
+
+
+03/27 06:28:52 PM | epoch98
+03/27 06:28:52 PM | using seed 98
+468it [03:24,  2.43it/s]03/27 06:32:18 PM | Train: [99/100] Step 468/468 Loss -484.493 Acc@(1) 97.9%
+469it [03:25,  2.28it/s]
+03/27 06:32:18 PM | Train: [99/100] Final Prec@1 97.9167%
+03/27 06:32:34 PM | Valid: [99/100] Final Prec@1 98.0267%
+03/27 06:32:34 PM | Quality: 0.9802666666666666 
+
+
+03/27 06:32:34 PM | epoch99
+03/27 06:32:34 PM | using seed 99
+468it [03:25,  2.41it/s]03/27 06:36:01 PM | Train: [100/100] Step 468/468 Loss -490.450 Acc@(1) 95.8%
+469it [03:25,  2.28it/s]
+03/27 06:36:01 PM | Train: [100/100] Final Prec@1 95.8333%
+03/27 06:36:17 PM | Valid: [100/100] Final Prec@1 97.9467%
+03/27 06:36:17 PM | Quality: 0.9794666666666667 
+
+
+03/27 06:36:17 PM | Final best =  0.9829333333969116
