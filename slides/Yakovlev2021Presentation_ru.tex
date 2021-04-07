@@ -16,6 +16,9 @@
 % Your figures are here:
 \graphicspath{ {fig/} {../fig/} }
 
+\usepackage{algorithm, algorithmic}
+\usepackage{multirow}
+
 %----------------------------------------------------------------------------------------------------------
 \title[\hbox to 56mm{Алгоритм поиска архитектуры}]{Дифференцируемый алгоритм поиска архитектуры модели с контролем её сложности}
 \author[К.\,Д. Яковлев]{Константин Дмитриевич Яковлев}
@@ -33,10 +36,22 @@
 \maketitle
 \end{frame}
 %-----------------------------------------------------------------------------------------------------
-%\begin{frame}{Цель исследования}
-%%\begin{block}{Решается задача}
-%%\end{block}
-%\end{frame}
+\begin{frame}{Цель исследования}
+\begin{block}{Цель} 
+Предложить метод поиска архитектуры модели глубокого обучения с контролем сложности модели.
+\end{block}
+
+~\\
+\begin{block}{Проблема}
+Семейство моделей глубокого обучения имеет избытычное число параметров. Использование моделей, работающих с дискретной архитектурой, является вычислительно сложной задачей.
+\end{block}
+~\\
+\begin{block}{Метод решения}
+
+В основе метода лежит дифференцируемый алгоритм поиска архитектуры (DARTS). Гиперсеть выступает в качестве функции релаксации. Гиперсеть -- это модель, генерирующая параметры другой модели. 
+\end{block}
+
+\end{frame}
 %-----------------------------------------------------------------------------------------------------
 \begin{frame}{DARTS и линейная гиперсеть}
 
@@ -58,9 +73,6 @@
 
 $\mathbf{\alpha} = \mathbf{G}_\text{linear}(\lambda)$
 
-
-\item Получение дискретной архитектуры:
-$o^{(i, j)} = \arg\max_{o\in\mathcal{O}}\alpha_o^{(i, j)}$
 \end{itemize}
 
 
@@ -69,37 +81,150 @@ $o^{(i, j)} = \arg\max_{o\in\mathcal{O}}\alpha_o^{(i, j)}$
 
 
 %----------------------------------------------------------------------------------------------------------
-%\begin{frame}{Постановка задачи}
-%
-%\end{frame}
+\begin{frame}{Основная литература}
+
+\begin{thebibliography}{1}
+
+
+\bibitem{einstein} 
+Hanxiao Liu and Karen Simonyan and Yiming Yang. 
+\textit{DARTS: Differentiable Architecture Search}.
+CoRR, 2018.
+
+\bibitem{latexcompanion} 
+David Ha and Andrew M. Dai and Quoc V. Le.
+\textit{HyperNetworks}. 
+CoRR, 2016.
+
+\end{thebibliography}			
+\end{frame}
+
+
+
+
+%----------------------------------------------------------------------------------------------------------
+\begin{frame}{Постановка задачи поиска архитектуры ячейки}
+
+\begin{itemize}
+
+\item \textbf{Узлы}:
+
+ $\{x^{(i)}\}_{i=1}^N$ -- узлы ориентированного ациклического графа. 
+
+\item \textbf{Значение в текущем узле}:
+
+ $$x^{(j)} = \sum_{i < j}o^{(i, j)}(x^{(i)})~~o^{(i, j)} \in\mathcal{O}$$
+
+
+\item \textbf{Смешанная операция}: $$\hat{o}^{(i, j)}(x) = \sum_{o\in \mathcal{O}} \alpha_o^{(i, j)}o(x)$$
+
+\item \textbf{Вектор параметров архитектуры}: $$\alpha = [\alpha^{(i, j)}]$$
+
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Линейная гиперсеть}
+
+\begin{block}{Гиперсеть}
+$$\mathbf{G} : \Lambda \times \mathbb{U} \rightarrow \mathbb{A}$$
+$\mathbb{A}$ -- пространство параметров архитектуры, $\mathbb{U}$ -- множество параметров гиперсети.
+\end{block}
+
+\begin{itemize}
+\item \textbf{Вектор параметров архитектуры определяется гиперсетью}:
+$$\alpha = \lambda\mathbf{b}_1 + \mathbf{b}_2$$
+
+\item \textbf{Задача оптимизации}:
+$$\min_{\alpha}\mathcal{L}_\text{val}(\mathbf{w}^*(\alpha), \alpha),$$ $$
+ \mathrm{s.t.}\quad \mathbf{w}^* = \arg\min_{\mathbf{w}}\mathcal{L}_\text{train}(\mathbf{w}, \alpha)$$
+\end{itemize}
+
+
+
+\end{frame}
 %%----------------------------------------------------------------------------------------------------------
-%\begin{frame}{Решение}
-%\begin{columns}[c]
-%\column{0.6\textwidth}
-%    Столбец 1
-%\column{0.4\textwidth}
-%    Столбец 2
-%\end{columns}
-%\end{frame}
+\begin{frame}{Решение}
+\begin{itemize}
+\item \textbf{Алгоритм  DARTS}:
+ \begin{algorithm}[H]
+\begin{algorithmic}[1]
+\caption{DARTS -- Differentiable Architecture Search}
+\STATE Для каждого узла создадим смешанную операцию $\hat{o}^{(i, j)}$, параметризованную $\alpha^{(i, j)}$
+\WHILE{алгоритм не сошелся} 
+\STATE  обновить $\alpha$: $\nabla_\alpha \mathcal{L}_\text{val}\bigl(\mathbf{w} - \xi\nabla_{\mathbf{w}}\mathcal{L}_\text{train}(\mathbf{w}, \alpha), \alpha\bigr)$
+\STATE обновить веса $\mathbf{w}$: $\nabla_\mathbf{w}\mathcal{L}_\text{train}(\mathbf{w}, \alpha)$
+\ENDWHILE
+\STATE получить окончательную архитектуру из полученного $\alpha$
+\end{algorithmic}
+\end{algorithm}
+\item \textbf{Получение дискретной архитектуры}:
+
+$$o^{(i, j)} =\arg\max_{o\in\mathcal{O}}\alpha_o^{(i, j)}$$
+
+\end{itemize}
+
+\end{frame}
 %%----------------------------------------------------------------------------------------------------------
-%\begin{frame}{Вычислительный эксперимент}
-%
-% Что зритель видит на графике.
-%
-%\includegraphics[width=0.8\textwidth]{ErrorFunction}
-%
-%О чем говорит этот график.
-%
-%\end{frame}
+\begin{frame}{Вычислительный эксперимент}
+
+\begin{block}{Цель}
+Получение зависимости качества работы предложенного метода от параметра гиперсети $\lambda \in \{10^{-4}, 10^{-3}, 10^{-2}, 10^{-1}\}$
+\end{block}
+
+\begin{block}{Критерий качества}
+ $$\mathrm{Precision} = \frac{\mathrm{TP}}{\mathrm{TP} + \mathrm{FP}}$$
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Результаты вычислительного эксперимента}
+
+\begin{figure}
+\caption{Зависимость качества модели от числа прошедших эпох для разных параметров $\lambda$ гиперсети.}
+\includegraphics[width=0.55\textwidth]{main_100_exp}
+\end{figure}
+
+Для $\lambda = 0.1$ качество модели заметно хуже, чем для других значениях $\lambda$. Также для каждой эпохи и для каждого $\lambda \in \{10^{-4}, 10^{-3}, 10^{-2}\}$ качество модели практически не меняется.
+
+\end{frame}
+
+
+\begin{frame}{Анализ ошибки}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ |c|c|c|c|c| }
+	\hline
+	 \multirow{2}{*}{Модель} & \multicolumn{4}{c|}{Precision, \%} \\ \cline{2-5}
+	 		& эпоха 30 & эпоха 50 & эпоха 70 & эпоха 100\\
+	 \hline
+ 	Hypernet, $\lambda = 0.1$ &96.3500 & 95.4800 & 94.1200 & 90.6333  \\ 
+ 	Hypernet, $\lambda = 0.01$ &95.8900 & 96.7167& 91.0633 & 95.3133 \\ 
+ 	Hypernet, $\lambda = 0.001$ &95.9133 & 96.6200 & 90.6400 & 95.6400 \\ 
+ 	Hypernet, $\lambda = 0.0001$ &95.9733 & 96.5367 & 90.4067 & 95.7533\\
+ 	\hline
+ 	DARTS, $\lambda = 0.1$&86.6000 &87.3967 & 89.3433 & 89.5067 \\
+ 	DARTS, $\lambda = 0.01$& 84.1333 & 90.6333 &91.9100 & 92.7333\\
+ 	DARTS, $\lambda = 0.001$&97.6533 & 97.5800 & 98.0833 & 97.9467 \\
+ 	DARTS, $\lambda = 0.0001$& \textbf{98.5800} &  \textbf{98.8867}&\textbf{98.9467}&\textbf{99.2400} \\
+ 	\hline
+\end{tabular}
+\caption{Результаты базового и основного экспериментов. Приведены значения качества моделей на валидации.}
+\end{table}
+
+\end{frame}
 %%----------------------------------------------------------------------------------------------------------
-%\begin{frame}{Заключение}
-%    \begin{block}{Перечислите ваши результаты}
-%    \begin{itemize}
-%        \item предложен метод,
-%        \item доказана теорема.
-%    \end{itemize}
-%    \end{block}
-%\end{frame}
+\begin{frame}{Заключение}
+    \begin{block}{Перечислите ваши результаты}
+    \begin{itemize}
+        \item Предложен метод, позволяющий контролировать сложность модели в процессе поиска архитектуры.
+        \item Метод обладает тем свойством, что изменение сложности итоговой модели происходит заменой параметра $\lambda$ гиперсети без дополнительного обучения.
+        \item Также результаты показывают, что данный метод сопоставим по качеству на валидационной выборке с DARTS.
+    \end{itemize}
+    \end{block}
+\end{frame}
 %%----------------------------------------------------------------------------------------------------------
 %\end{document} 
 %\end{frame}
