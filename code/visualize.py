@@ -21,7 +21,7 @@ def plot(genotype, file_path, caption=None):
         'fontname': 'times'
     }
     g = Digraph(
-        format='png',
+        format='eps',
         edge_attr=edge_attr,
         node_attr=node_attr,
         engine='dot')
