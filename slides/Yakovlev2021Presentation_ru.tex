@@ -53,7 +53,7 @@
 
 \end{frame}
 %-----------------------------------------------------------------------------------------------------
-\begin{frame}{DARTS и линейная гиперсеть}
+\begin{frame}{DARTS с использованием линейной гиперсети}
 
 %\begin{columns}[c]
 %\column{0.5\textwidth}
@@ -69,11 +69,10 @@
 
 
 \begin{itemize}
-\item Значения в узлах: $$x^{(j)} = \sum_{i < j}o^{(i, j)}(x^{(i)})$$
 
-\item Смешанная операция: $$\hat{o}^{(i, j)}(x) = \sum_{o\in\mathcal{O}}\alpha^{(i, j)}_oo(x)$$
+\item \textbf{Смешанная операция}: $$\hat{o}^{(i, j)}(x) = \sum_{o\in\mathcal{O}}\textcolor{red}{\alpha^{(i, j)}_o}o(x)$$
 
-\item Линейная гиперсеть: $$\mathbf{\alpha} = \lambda\mathbf{b}_1 + \mathbf{b}_2$$
+\item \textbf{Линейная гиперсеть задает параметры архитектуры}: $$\mathbf{\alpha} = \lambda\mathbf{b}_1 + \mathbf{b}_2, \quad $$
 
 \end{itemize}
 
@@ -125,7 +124,7 @@ CoRR, 2019.
 
 \item \textbf{Значение в текущем узле}:
 
- $$x^{(j)} = \sum_{i < j}o^{(i, j)}(x^{(i)})~~o^{(i, j)} \in\mathcal{O}$$
+ $$x^{(j)} = \sum_{i < j}\textcolor{red}{o^{(i, j)}}(x^{(i)})~~o^{(i, j)} \in\mathcal{O}$$
 
 
 \item \textbf{Смешанная операция}: $$\hat{o}^{(i, j)}(x) = \sum_{o\in \mathcal{O}} \alpha_o^{(i, j)}o(x)$$
@@ -141,28 +140,26 @@ CoRR, 2019.
 
 \begin{block}{Гиперсеть}
 $$\mathbf{G} : \Lambda \times \mathbb{U} \rightarrow \mathbb{A}.$$
-$\mathbb{A}$ -- пространство параметров архитектуры, $\mathbb{U}$ -- множество параметров гиперсети.
+$\mathbb{A}$ -- пространство параметров архитектуры, $\mathbb{U}$ -- множество параметров гиперсети. $\Lambda$ -- множество параметров, контролирующие сложность модели.
 \end{block}
 
 \begin{itemize}
 \item \textbf{Вектор параметров архитектуры определяется гиперсетью}:
-$$\alpha = \lambda\mathbf{b}_1 + \mathbf{b}_2.$$
+$$\alpha = \lambda\mathbf{b}_1 + \mathbf{b}_2, \quad [\mathbf{b}_1, \mathbf{b}_2]^\top \in \mathbb{U}, \quad \lambda \in \Lambda = \mathbb{R}, \quad \alpha \in \mathbb{A}.$$
 
 \item \textbf{Задача оптимизации}:
-$$\min_{\alpha}\mathcal{L}_\text{val}(\mathbf{w}^*(\alpha), \alpha),$$ $$
+$$\min_{\alpha}\mathcal{L}_\text{val}(\mathbf{w}^*, \alpha),$$ $$
  \mathrm{s.t.}\quad \mathbf{w}^* = \arg\min_{\mathbf{w}}\mathcal{L}_\text{train}(\mathbf{w}, \alpha).$$
+$\mathcal{L}_\text{train}(w, \alpha), ~\mathcal{L}_\text{val}(w, \alpha)$ -- кросс-энтропия.
 \end{itemize}
 
 
 
 \end{frame}
 %%----------------------------------------------------------------------------------------------------------
-\begin{frame}{DARTS}
-\begin{itemize}
-\item \textbf{Алгоритм  DARTS}:
+\begin{frame}{Алгоритм DARTS}
  \begin{algorithm}[H]
 \begin{algorithmic}[1]
-\caption{DARTS -- Differentiable Architecture Search}
 \STATE Для каждого узла создадим смешанную операцию $\hat{o}^{(i, j)}$, параметризованную $\alpha^{(i, j)}$
 \WHILE{алгоритм не сошелся} 
 \STATE  обновить $\alpha$: $\nabla_\alpha \mathcal{L}_\text{val}\bigl(\mathbf{w} - \xi\nabla_{\mathbf{w}}\mathcal{L}_\text{train}(\mathbf{w}, \alpha), \alpha\bigr)$
@@ -171,18 +168,18 @@ $$\min_{\alpha}\mathcal{L}_\text{val}(\mathbf{w}^*(\alpha), \alpha),$$ $$
 \STATE получить окончательную архитектуру из полученного $\alpha$
 \end{algorithmic}
 \end{algorithm}
-\item \textbf{Получение дискретной архитектуры}:
+\textbf{Получение дискретной архитектуры}:
 
 $$o^{(i, j)} =\arg\max_{o\in\mathcal{O}}\alpha_o^{(i, j)}.$$
 
-\end{itemize}
 
 \end{frame}
 %%----------------------------------------------------------------------------------------------------------
 \begin{frame}{Вычислительный эксперимент}
 
 \begin{block}{Цель}
-Получение зависимости качества работы предложенного метода от параметра гиперсети $\lambda \in \{10^{-4}, 10^{-3}, 10^{-2}, 10^{-1}\}$. Эксперимент проводится на выборке MNIST.
+Получение зависимости качества работы предложенного метода от параметра гиперсети $\lambda \in \{10^{-4}, 10^{-3}, 10^{-2}, 10^{-1}\}$.
+ Эксперимент проводится на выборке MNIST.
 \end{block}
 
 \begin{block}{Критерии качества}
@@ -192,7 +189,7 @@ $$o^{(i, j)} =\arg\max_{o\in\mathcal{O}}\alpha_o^{(i, j)}.$$
 
 \end{frame}
 
-\begin{frame}{Качество Hypernet}
+\begin{frame}{Качество DARTS с использованием гиперсети}
 
 \begin{center}
 Зависимость качества модели от числа прошедших эпох для разных параметров $\lambda$ гиперсети.
@@ -204,7 +201,7 @@ $$o^{(i, j)} =\arg\max_{o\in\mathcal{O}}\alpha_o^{(i, j)}.$$
 \end{frame}
 
 
-\begin{frame}{Сравнение Hypernet и DARTS}
+\begin{frame}{Сравнение предложенного метода и DARTS с $L_1$ регуляризатором}
 \begin{center}
 Значения качества моделей на валидации.
 \begin{table}[H]
@@ -213,32 +210,30 @@ $$o^{(i, j)} =\arg\max_{o\in\mathcal{O}}\alpha_o^{(i, j)}.$$
 	 \multirow{2}{*}{Модель} & \multicolumn{4}{c|}{Precision, \%} \\ \cline{2-5}
 	 		& эпоха 30 & эпоха 50 & эпоха 70 & эпоха 100\\
 	 \hline
- 	Hypernet, $\lambda = 10^{-1}$ &96,3500 & 95,4800 & 94,1200 & 90,6333  \\ 
- 	Hypernet, $\lambda = 10^{-2}$ &95,8900 & 96,7167& 91,0633 & 95,3133 \\ 
- 	Hypernet, $\lambda = 10^{-3}$ &95,9133 & 96,6200 & 90,6400 & 95,6400 \\ 
- 	Hypernet, $\lambda = 10^{-4}$ &95,9733 & 96,5367 & 90,4067 & 95,7533\\
+ 	Гиперсеть, $\lambda = 10^{-1}$ &96,3500 & 95,4800 & 94,1200 & 90,6333  \\ 
+ 	Гиперсеть, $\lambda = 10^{-2}$ &95,8900 & 96,7167& 91,0633 & 95,3133 \\ 
+ 	Гиперсеть, $\lambda = 10^{-3}$ &95,9133 & 96,6200 & 90,6400 & 95,6400 \\ 
+ 	Гиперсеть, $\lambda = 10^{-4}$ &95,9733 & 96,5367 & 90,4067 & 95,7533\\
  	\hline
- 	DARTS, $\lambda = 10^{-1}$ &86,6000 &87,3967 & 89,3433 & 89,5067 \\
- 	DARTS, $\lambda = 10^{-2}$ & 84,1333 & 90,6333 &91,9100 & 92,7333\\
- 	DARTS, $\lambda = 10^{-3}$ &97.6533 & 97.5800 & 98.0833 & 97,9467 \\
- 	DARTS, $\lambda = 10^{-4}$ & \textbf{98,5800} &  \textbf{98,8867}&\textbf{98,9467}&\textbf{99,2400} \\
+ 	DARTS+$L_1$, $\lambda = 10^{-1}$ &86,6000 &87,3967 & 89,3433 & 89,5067 \\
+ 	DARTS+$L_1$, $\lambda = 10^{-2}$ & 84,1333 & 90,6333 &91,9100 & 92,7333\\
+ 	DARTS+$L_1$, $\lambda = 10^{-3}$ &97.6533 & 97.5800 & 98.0833 & 97,9467 \\
+ 	DARTS+$L_1$, $\lambda = 10^{-4}$ & \textbf{98,5800} &  \textbf{98,8867}&\textbf{98,9467}&\textbf{99,2400} \\
  	\hline
 \end{tabular}
 \end{table}
 \end{center}
 
-Для модели Hypernet качество на валидации уменьшается с ростом номера эпохи.
+Для модели DARTS с использованием гиперсети качество на валидации уменьшается с ростом номера эпохи.
 
 \end{frame}
 %%----------------------------------------------------------------------------------------------------------
 \begin{frame}{Заключение}
-    \begin{block}{Результаты}
     \begin{itemize}
         \item Предложен метод, позволяющий контролировать сложность модели в процессе поиска архитектуры.
         \item Метод обладает тем свойством, что изменение сложности итоговой модели происходит заменой параметра $\lambda$ гиперсети без дополнительного обучения.
         \item Также результаты показывают, что данный метод сопоставим по качеству на валидационной выборке с DARTS.
     \end{itemize}
-    \end{block}
 \end{frame}
 %%----------------------------------------------------------------------------------------------------------
 %\end{document} 
