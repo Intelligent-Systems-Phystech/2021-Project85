@@ -1,0 +1,144 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+%\documentclass{article}
+%
+\usepackage{graphicx}
+%\usepackage{amsmath}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\begin{document}
+%
+\title{Differentiable algorithm for searching the model architecture with control of its complexity\thanks{Supported by organization x.}}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{K.\,D.~Yakovlev\inst{1}\orcidID{0000-1111-2222-3333} \and
+O.\,S.~Grebenkova\inst{1}\orcidID{1111-2222-3333-4444} \and
+O.\,Y.~Bakhteev\inst{1}\orcidID{2222--3333-4444-5555}}
+%\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{MIPT, Russia
+\email{\{iakovlev.kd, grebenkova.os, bakhteev\}@phystech.edu}\\
+\url{http://www.springer.com/gp/computer-science/lncs}}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+The paper investigates the problem of deep learning model optimization. The authors propose a method for finding the architecture of a model that allows you to control its complexity with a small computational cost. The complexity of the model refers to the minimum length of the description,
+the minimum amount of information required to transmit information about the model and the dataset. The method is based on a differentiable architecture search algorithm (DARTS). It is proposed to use the hypernet as a relaxation function. A hypernet is a model that generates the parameters of an optimal model. The proposed method allows you to control the complexity of the model in the process of searching for an architecture. To assess the quality of the proposed algorithm, experiments are conducted on a sample of MNIST.
+
+\keywords{differentiable architecture search \and deep learning \and hypernetwork \and neural networks \and model complexity control.}
+\end{abstract}
+%
+%
+%
+\section{Introduction}
+
+In this paper, we consider the problem of searching the architecture of a deep learning model with the control of its complexity. A model is a superposition of functions that solves a classification or regression problem \cite{journals/aarc/BakhteevS18}. The search for the model architecture is understood as the search for optimal structural parameters. Relaxation refers to the translation of a set of acceptable structural parameters from discrete to continuous. The basic algorithm is differentiable architecture search algorithm \cite{journals/corr/abs-1806-09055}. It solves the problem of searching the model architecture by translating the search space of structural parameters from a discrete to a continuous representation. It is proposed to use gradient optimization methods. They use less computational resources than methods that operate on a discrete set of structural parameters. This algorithm works with both convolutional and recurrent neural networks.
+
+In \cite{journals/corr/abs-2002-05283} it is stated that DARTS is unstable. This is due to the fact that the parameters of the model architecture converge in a narrow region. Therefore, small perturbations of the architecture lead to a significant decrease in quality.
+
+In \cite{journals/corr/abs-1911-12126}, it was noticed that the $\mathrm{softmax}$ function has a significant drawback. Some components of the architecture parameter vector increase faster than others. This leads to the fact that the architecture is oversimplified and, as a result, the quality deteriorates \cite{journals/corr/abs-1911-12126}. In this regard, it is proposed to use the sigmoid relaxation function and abandon the normalization. Thus, all the architecture parameters change at the same rate. In this paper, we propose to use the hypernet \cite{journals/corr/HaDL16} as a relaxation function. The approach is to use a small network to generate the architecture parameters of the desired network. The hypernet is also used to control the complexity.
+
+Alternative DARTS approaches to solving the problem of searching the model architecture are proposed. In \cite{journals/corr/abs-2006-10355}, the problem of distribution learning is formulated. The architecture parameters are subject to the Dirichlet distribution, since they are defined on the probabilistic simplex. Thus, the task of searching the architecture is reduced to finding the parameters of the Dirichlet distribution.
+
+The paper \cite{journals/corr/abs-1912-12814} builds a method for searching for a neural architecture with a limited resource (RC-DARTS). Restrictions are added to the basic DARTS algorithm, such as the number of model parameters. To solve the problem of conditional optimization, an iterative projection algorithm is introduced, which consists in the fact that after a certain number of iterations of gradient descent, the projection occurs on the set specified by the constraints.
+
+The computational experiment is performed on a dataset MNIST \cite{lecun-mnisthandwrittendigit-2010}.
+
+\section{Problem statement}
+
+\subsection{Differentiable cell architecture search algorithm}
+
+Let's set the task of finding the cell architecture.
+A cell is a $N$ of numbered nodes represented as a directed acyclic graph. Each edge of $(i, j)$ is assigned a mapping (operation) $o^{(i, j)} \in \mathcal{O}$, where $\mathcal{O}$ is a family of maps (a set of operations). Values in each of the intermediate nodes $x^{(j)}$ are defined through the values in the nodes with the lower number:
+
+ \begin{equation}
+ x^{(j)} = \sum_{i < j}o^{(i, j)}(x^{(i)}).
+ \end{equation}
+ 
+ \begin{figure}
+ \centering
+ \includegraphics[width=\textwidth]{reduction.eps}
+ \caption{Example of the found architecture}
+ \end{figure}
+
+The task of architecture search is to choose the mapping between the cell nodes. In order to reduce the discrete optimization problem to the continuous optimization problem, we introduce a mixed operation for each edge $(i, j)$:
+
+\begin{equation}
+\hat{o}^{(i, j)}(x) = \sum_{o\in \mathcal{O}} \frac{\exp(\alpha_o^{(i, j)})}{\sum_{o'\in\mathcal{O}} \exp(\alpha_{o'}^{(i, j)})}o(x),
+\end{equation}
+where $\alpha_o^{(i, j)}$ denotes the corresponding weight of the operation $o$ on the edge of $(i, j)$. Thus, each edge $(i, j)$ is assigned a vector $\alpha^{(i, j)}$ of dimension $|\mathcal{O}|$. Let
+$\vec{\alpha} = [\alpha^{(i, j)}]$. We formulate a two-level optimization problem:
+
+\begin{equation}
+\label{optim}
+\begin{array}{rrclcl}
+\displaystyle \min_{\vec{\alpha}}\mathcal{L}_\mathrm{val}(\mathbf{w}^*, \vec{\alpha}),\\
+\textrm{s.t.}\displaystyle \quad \vec{w}^* = \arg\min_{\mathbf{w}}\mathcal{L}_\mathrm{train}(\mathbf{w}, \vec{\alpha})\\
+\end{array}
+\end{equation}
+Here $\mathcal{L}_\mathrm{val}$ and $\mathcal{L}_\mathrm{train}$ are the loss functions of the model on validation and on training, respectively.
+
+\subsection{Linear hypernet}
+
+Let $\Lambda$ be a set of parameters that control the complexity of the model. A hypernet is a mapping:
+
+\begin{equation}
+\mathbf{G}: \Lambda \times U \to A,
+\end{equation}
+where $A$ is the architecture parameter space $\{\alpha^{(i, j)} _o\}$, and $U$ is the set of hypernet parameters.
+In this paper, a linear hypernet is used to obtain the weights of operations:
+
+\begin{equation}\label{hypernet}
+ \vec{\alpha} = \mathbf{G}_{\mathrm{linear}}(\lambda) = \lambda \mathbf{b}_1 + \mathbf{b}_2, \quad [\mathbf{b}_1, \mathbf{b}_2]^\top \in U
+ \end{equation}
+where $\mathbf{b}_1, ~\mathbf{b}_2$ are configured according to the optimization problem \ref{optim}.
+
+\section{Computational experiment}
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+\newpage
+\bibliographystyle{splncs04}
+\bibliography{Version1}
+\nocite{*}
+%
+%\begin{thebibliography}{8}
+%\bibitem{ref_article1}
+%Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
+%
+%\bibitem{ref_lncs1}
+%Author, F., Author, S.: Title of a proceedings paper. In: Editor,
+%F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
+%Springer, Heidelberg (2016). \doi{10.10007/1234567890}
+%
+%\bibitem{ref_book1}
+%Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
+%Location (1999)
+%
+%\bibitem{ref_proc1}
+%Author, A.-B.: Contribution title. In: 9th International Proceedings
+%on Proceedings, pp. 1--2. Publisher, Location (2010)
+%
+%\bibitem{ref_url1}
+%LNCS Homepage, \url{http://www.springer.com/lncs}. Last accessed 4
+%Oct 2017
+%\end{thebibliography}
+\end{document}
